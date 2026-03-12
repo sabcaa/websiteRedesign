@@ -3,12 +3,11 @@ Theme Name: Hello Elementor Child
 Template: hello-elementor
 */
 
-
 /* ============================================================
    GOOGLE FONTS
    Montserrat (heading), Noto Sans (body)
-   These are loaded here for the mockup.
-   In WordPress, load via functions.php instead.
+   Note: In WordPress these are loaded via functions.php.
+   The @import here is only for standalone HTML mockups.
 ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans:wght@400;500;600&display=swap');
 
@@ -120,21 +119,22 @@ em { font-style: italic; }
 
 .btn-primary {
     background: var(--blue);
-    color: var(--white);
+    color: var(--white) !important;
 }
 .btn-primary:hover {
     background: var(--blue-dark);
-    color: var(--white);
+    color: var(--white) !important;
     text-decoration: none;
 }
 
 .btn-secondary {
     background: var(--white);
-    color: var(--blue);
+    color: var(--blue) !important;
     border: 2px solid var(--blue);
 }
 .btn-secondary:hover {
     background: var(--blue-light);
+    color: var(--blue) !important;
     text-decoration: none;
 }
 
@@ -152,3 +152,100 @@ em { font-style: italic; }
     color: var(--text-mid);
 }
 .callout strong { color: var(--blue); }
+
+/* ============================================================
+   PAGE HERO
+   Sitewide component used on all custom page templates.
+   Content (title, subtitle, breadcrumbs) is set per-page
+   via template-parts/page-hero.php
+============================================================ */
+.page-hero {
+    background: var(--blue);
+    padding: 48px 60px 44px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative background circles */
+.page-hero::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: var(--cyan);
+    opacity: 0.08;
+}
+.page-hero::before {
+    content: '';
+    position: absolute;
+    right: 120px;
+    bottom: -80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--cyan);
+    opacity: 0.05;
+}
+
+.page-hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--white) !important;
+    line-height: 1.2;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero-sub {
+    color: rgba(255, 255, 255, 0.82) !important;
+    margin-top: 10px;
+    font-size: 1.05rem;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65) !important;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+}
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    text-decoration: none;
+    font-weight: normal;
+}
+.breadcrumb a:hover {
+    color: var(--white) !important;
+}
+.breadcrumb span {
+    margin: 0 6px;
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+.breadcrumb-current {
+    color: var(--white) !important;
+    font-weight: normal;
+}
+
+/* Mobile hero */
+@media (max-width: 800px) {
+    .page-hero {
+        padding: 32px 20px;
+    }
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+}

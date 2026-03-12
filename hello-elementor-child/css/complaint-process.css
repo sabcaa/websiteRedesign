@@ -2,74 +2,8 @@
    complaint-process.css
    Styles specific to the complaint process page template.
    Depends on variables defined in style.css.
+   Hero styles are in style.css as a sitewide component.
 ============================================================ */
-
-/* ============================================================
-   PAGE HERO BANNER
-============================================================ */
-.page-hero {
-    background: var(--blue);
-    padding: 48px 40px 44px;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Decorative background circles */
-.page-hero::after {
-    content: '';
-    position: absolute;
-    right: -60px;
-    top: -60px;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: var(--cyan);
-    opacity: 0.08;
-}
-.page-hero::before {
-    content: '';
-    position: absolute;
-    right: 120px;
-    bottom: -80px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: var(--cyan);
-    opacity: 0.05;
-}
-
-.breadcrumb {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.65);
-    margin-bottom: 14px;
-    letter-spacing: 0.02em;
-}
-.breadcrumb a {
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-}
-.breadcrumb a:hover { color: white; }
-.breadcrumb span { margin: 0 6px; }
-
-.page-hero h1 {
-    font-family: var(--font-heading);
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: white;
-    line-height: 1.2;
-    max-width: 600px;
-    position: relative;
-    z-index: 1;
-}
-
-.page-hero-sub {
-    color: rgba(255,255,255,0.82);
-    margin-top: 10px;
-    font-size: 1.05rem;
-    max-width: 560px;
-    position: relative;
-    z-index: 1;
-}
 
 /* ============================================================
    LAYOUT: SIDEBAR + CONTENT
@@ -352,36 +286,17 @@
 .cta-section h2 {
     font-family: var(--font-heading);
     font-size: 1.4rem;
-    color: var(--white);
+    color: var(--white) !important;
     margin-bottom: 6px;
     border: none;
     padding: 0;
 }
 
 .cta-section p {
-    color: rgba(255,255,255,0.78);
+    color: rgba(255, 255, 255, 0.78) !important;
     font-size: 0.95rem;
     margin: 0;
     max-width: 420px;
-}
-
-.cta-btn {
-    display: inline-block;
-    background: var(--white);
-    color: var(--blue);
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: all 0.15s ease;
-}
-.cta-btn:hover {
-    background: var(--blue-light);
-    color: var(--blue);
 }
 
 /* ============================================================
@@ -399,11 +314,6 @@
     }
     .toc-box { display: none; }
     .mobile-toc { display: block; }
-
-    .page-hero {
-        padding: 32px 20px;
-    }
-    .page-hero h1 { font-size: 1.8rem; }
 
     .content-section {
         padding: 24px 22px;

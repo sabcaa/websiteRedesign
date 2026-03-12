@@ -202,7 +202,7 @@ get_header(); ?>
                 <h2>Ready to submit a complaint?</h2>
                 <p>Complete the online complaints form. Information collected is used under the authority of the <em>Health Professions Act</em>.</p>
             </div>
-            <a href="https://form.jotform.com/251265458465060" class="cta-btn">Submit a complaint →</a>
+            <a href="https://form.jotform.com/251265458465060" class="btn btn-secondary">Submit a complaint →</a>
         </div>
 
     </main>
