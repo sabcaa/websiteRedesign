@@ -4,45 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit a Complaint – College of Acupuncturists of Alberta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Sitewide styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/complaint-process.css">
+
     <style>
         /* ============================================================
-           CSS VARIABLES
-        ============================================================ */
-        :root {
-            --blue:       #004A8D;
-            --blue-dark:  #003870;
-            --blue-light: #E8F1FA;
-            --cyan:       #00AFEF;
-            --cyan-light: #E5F6FD;
-            --green:      #78A22D;
-            --green-light:#F0F5E8;
-            --orange:     #F48465;
-            --orange-light:#FEF0EC;
-            --text:       #1A1A2E;
-            --text-mid:   #444;
-            --text-light: #666;
-            --border:     #DDE3EA;
-            --white:      #ffffff;
-            --sidebar-w:  260px;
-            --content-max:780px;
-        }
-
-        /* ============================================================
-           RESET & BASE
-        ============================================================ */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 17px;
-            line-height: 1.7;
-            color: var(--text);
-            background: #F7F9FB;
-        }
-
-        /* ============================================================
-           FAKE NAV (for mockup context — remove when in WP)
+           MOCK NAV — for mockup preview only, remove when in WordPress
         ============================================================ */
         .mock-nav {
             background: var(--blue);
@@ -53,497 +30,29 @@
         }
         .mock-nav-logo {
             color: white;
-            font-family: 'Source Serif 4', serif;
-            font-size: 1.1rem;
+            font-family: var(--font-heading);
+            font-size: 1rem;
             font-weight: 700;
             letter-spacing: 0.01em;
         }
         .mock-nav-logo span {
             display: block;
-            font-size: 0.7rem;
-            font-weight: 400;
+            font-size: 0.65rem;
+            font-weight: 600;
             opacity: 0.75;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-        }
-
-        /* ============================================================
-           PAGE HERO BANNER
-        ============================================================ */
-        .page-hero {
-            background: var(--blue);
-            padding: 48px 40px 44px;
-            position: relative;
-            overflow: hidden;
-        }
-        .page-hero::after {
-            content: '';
-            position: absolute;
-            right: -60px;
-            top: -60px;
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            background: var(--cyan);
-            opacity: 0.08;
-        }
-        .page-hero::before {
-            content: '';
-            position: absolute;
-            right: 120px;
-            bottom: -80px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: var(--cyan);
-            opacity: 0.05;
-        }
-        .breadcrumb {
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.65);
-            margin-bottom: 14px;
-            letter-spacing: 0.02em;
-        }
-        .breadcrumb a { color: rgba(255,255,255,0.75); text-decoration: none; }
-        .breadcrumb a:hover { color: white; }
-        .breadcrumb span { margin: 0 6px; }
-
-        .page-hero h1 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: white;
-            line-height: 1.2;
-            max-width: 600px;
-            position: relative;
-            z-index: 1;
-        }
-        .page-hero-sub {
-            color: rgba(255,255,255,0.82);
-            margin-top: 10px;
-            font-size: 1.05rem;
-            max-width: 560px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ============================================================
-           LAYOUT: SIDEBAR + CONTENT
-        ============================================================ */
-        .page-layout {
-            display: flex;
-            align-items: flex-start;
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 40px 40px 80px;
-            gap: 48px;
-        }
-
-        /* ============================================================
-           SIDEBAR TOC
-        ============================================================ */
-        .sidebar {
-            width: var(--sidebar-w);
-            flex-shrink: 0;
-            position: sticky;
-            top: 24px;
-        }
-
-        .toc-box {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .toc-header {
-            background: var(--blue);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding: 12px 18px;
-        }
-        .toc-list {
-            list-style: none;
-            padding: 10px 0;
-        }
-        .toc-list li a {
-            display: block;
-            padding: 8px 18px;
-            font-size: 0.9rem;
-            color: var(--text-mid);
-            text-decoration: none;
-            border-left: 3px solid transparent;
-            transition: all 0.15s ease;
-            line-height: 1.35;
-        }
-        .toc-list li a:hover {
-            color: var(--blue);
-            background: var(--blue-light);
-            border-left-color: var(--cyan);
-        }
-        .toc-list li a.active {
-            color: var(--blue);
-            font-weight: 600;
-            background: var(--blue-light);
-            border-left-color: var(--blue);
-        }
-
-        .toc-cta {
-            margin-top: 16px;
-        }
-        .btn {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 6px;
-            padding: 13px 20px;
-            transition: all 0.15s ease;
-            cursor: pointer;
-            border: none;
-        }
-        .btn-primary {
-            background: var(--blue);
-            color: white;
-        }
-        .btn-primary:hover {
-            background: var(--blue-dark);
-        }
-        .btn-secondary {
-            background: white;
-            color: var(--blue);
-            border: 2px solid var(--blue);
-            margin-top: 10px;
-        }
-        .btn-secondary:hover {
-            background: var(--blue-light);
-        }
-
-        /* ============================================================
-           MAIN CONTENT
-        ============================================================ */
-        .main-content {
-            flex: 1;
-            min-width: 0;
-            max-width: var(--content-max);
-        }
-
-        /* Sections */
-        .content-section {
-            background: white;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            padding: 36px 40px;
-            margin-bottom: 24px;
-            scroll-margin-top: 24px;
-        }
-
-        .content-section h2 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 1.45rem;
-            font-weight: 700;
-            color: var(--blue);
-            margin-bottom: 16px;
-            padding-bottom: 14px;
-            border-bottom: 2px solid var(--blue-light);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .section-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--blue-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 0.9rem;
-        }
-
-        .content-section h3 {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text);
-            margin: 22px 0 10px;
-        }
-        .content-section p {
-            color: var(--text-mid);
-            margin-bottom: 14px;
-        }
-        .content-section p:last-child { margin-bottom: 0; }
-
-        .content-section ul, .content-section ol {
-            padding-left: 22px;
-            color: var(--text-mid);
-            margin-bottom: 14px;
-        }
-        .content-section li { margin-bottom: 6px; }
-
-        .content-section a {
-            color: var(--blue);
-            text-decoration: underline;
-            text-decoration-color: var(--cyan);
-            text-underline-offset: 3px;
-        }
-        .content-section a:hover { color: var(--cyan); }
-
-        /* ============================================================
-           INFO BOXES (can / cannot)
-        ============================================================ */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 4px;
-        }
-
-        .info-box {
-            border-radius: 6px;
-            padding: 20px 22px;
-        }
-        .info-box-title {
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .info-box-title .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        .info-box ul {
-            padding-left: 18px;
-            margin: 0;
-        }
-        .info-box li {
-            font-size: 0.92rem;
-            margin-bottom: 7px;
-            line-height: 1.45;
-        }
-
-        .info-box.can {
-            background: var(--green-light);
-            border: 1px solid #C8DDA0;
-        }
-        .info-box.can .info-box-title { color: #4A6B1A; }
-        .info-box.can .dot { background: var(--green); }
-        .info-box.can li { color: #3D5A15; }
-
-        .info-box.cannot {
-            background: var(--orange-light);
-            border: 1px solid #F7C4B5;
-        }
-        .info-box.cannot .info-box-title { color: #B84A2A; }
-        .info-box.cannot .dot { background: var(--orange); }
-        .info-box.cannot li { color: #8C3A20; }
-
-        /* ============================================================
-           PROCESS STEPS
-        ============================================================ */
-        .steps-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .step {
-            display: flex;
-            gap: 18px;
-            margin-bottom: 20px;
-            align-items: flex-start;
-        }
-        .step:last-child { margin-bottom: 0; }
-        .step-num {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--blue);
-            color: white;
-            font-weight: 700;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
             margin-top: 2px;
         }
-        .step-body strong {
-            display: block;
-            font-size: 1rem;
-            color: var(--text);
-            margin-bottom: 4px;
-        }
-        .step-body p {
-            font-size: 0.93rem;
-            color: var(--text-mid);
-            margin: 0;
-        }
-
-        /* ============================================================
-           OUTCOME CARDS (dismissal / resolution / investigation)
-        ============================================================ */
-        .outcome-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            margin-top: 4px;
-        }
-        .outcome-card {
-            background: var(--blue-light);
-            border: 1px solid #C5D8EE;
-            border-radius: 6px;
-            padding: 18px 20px;
-        }
-        .outcome-card h4 {
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: var(--blue);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            font-size: 0.8rem;
-        }
-        .outcome-card p {
-            font-size: 0.88rem;
-            color: var(--text-mid);
-            line-height: 1.5;
-            margin: 0 !important;
-        }
-
-        /* ============================================================
-           CALLOUT / NOTE BOX
-        ============================================================ */
-        .callout {
-            background: var(--cyan-light);
-            border-left: 4px solid var(--cyan);
-            border-radius: 0 6px 6px 0;
-            padding: 14px 18px;
-            margin: 16px 0;
-            font-size: 0.93rem;
-            color: var(--text-mid);
-        }
-        .callout strong { color: var(--blue); }
-
-        /* ============================================================
-           SUBMIT CTA SECTION
-        ============================================================ */
-        .cta-section {
-            background: var(--blue);
-            border-radius: 8px;
-            padding: 36px 40px;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-        .cta-section h2 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 1.4rem;
-            color: white;
-            margin-bottom: 6px;
-        }
-        .cta-section p {
-            color: rgba(255,255,255,0.78);
-            font-size: 0.95rem;
-            margin: 0;
-            max-width: 420px;
-        }
-        .cta-btn {
-            display: inline-block;
-            background: white;
-            color: var(--blue);
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            white-space: nowrap;
-            flex-shrink: 0;
-            transition: all 0.15s ease;
-        }
-        .cta-btn:hover {
-            background: var(--blue-light);
-        }
-
-        /* ============================================================
-           MOBILE
-        ============================================================ */
-        @media (max-width: 800px) {
-            .page-layout {
-                flex-direction: column;
-                padding: 24px 20px 60px;
-                gap: 24px;
-            }
-            .sidebar {
-                width: 100%;
-                position: static;
-            }
-            .toc-box { display: none; } /* hide full sidebar TOC */
-            .mobile-toc { display: block !important; }
-            .page-hero { padding: 32px 20px; }
-            .page-hero h1 { font-size: 1.8rem; }
-            .content-section { padding: 24px 22px; }
-            .info-grid { grid-template-columns: 1fr; }
-            .outcome-cards { grid-template-columns: 1fr; }
-            .cta-section { flex-direction: column; align-items: flex-start; }
-            .mock-nav { padding: 12px 20px; }
-        }
-
-        /* Mobile TOC (top "on this page") — hidden on desktop */
-        .mobile-toc {
-            display: none;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .mobile-toc summary {
-            background: var(--blue);
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 13px 18px;
-            cursor: pointer;
-            user-select: none;
-        }
-        .mobile-toc ul {
-            list-style: none;
-            padding: 10px 0;
-            margin: 0;
-        }
-        .mobile-toc ul li a {
-            display: block;
-            padding: 9px 18px;
-            font-size: 0.92rem;
-            color: var(--text-mid);
-            text-decoration: none;
-        }
-        .mobile-toc ul li a:hover { color: var(--blue); }
     </style>
 </head>
 <body>
 
-    <!-- MOCK NAV -->
+    <!-- MOCK NAV (remove in WordPress) -->
     <nav class="mock-nav">
         <div class="mock-nav-logo">
             College of Acupuncturists of Alberta
-           
+            <span>Health Regulator</span>
         </div>
     </nav>
 
@@ -558,7 +67,7 @@
         <p class="page-hero-sub">The College investigates complaints about registered acupuncturists in Alberta to protect the public.</p>
     </div>
 
-    <!-- LAYOUT -->
+    <!-- PAGE LAYOUT -->
     <div class="page-layout">
 
         <!-- SIDEBAR -->
@@ -603,7 +112,7 @@
             <!-- UNPROFESSIONAL CONDUCT -->
             <section class="content-section" id="what-is-unprofessional-conduct">
                 <h2>
-                    <span class="section-icon">⚖</span>
+                    <span class="section-icon"><i class="fa-solid fa-scale-balanced"></i></span>
                     What is unprofessional conduct?
                 </h2>
                 <p>As the regulatory body for acupuncturists in Alberta, the College investigates complaints about registered acupuncturists. Complaints must relate to unprofessional conduct. For more detail, refer to the College's <a href="#">Complaint Management Policy</a>.</p>
@@ -614,14 +123,14 @@
                     <li>Acts of non-compliance with specific member requirements imposed by the College</li>
                 </ul>
                 <div class="callout">
-                    <strong>Note:</strong> The College does not investigate complaints that are unrelated to a member's professional practice.
+                    <strong>Note:</strong> The College does not investigate complaints that are not related to a member's professional practice.
                 </div>
             </section>
 
             <!-- CAN / CANNOT -->
             <section class="content-section" id="can-we-investigate">
                 <h2>
-                    <span class="section-icon">🔍</span>
+                    <span class="section-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                     What we can and cannot investigate
                 </h2>
                 <div class="info-grid">
@@ -633,9 +142,8 @@
                         <ul>
                             <li>Lack of skill or knowledge in patient care</li>
                             <li>Breaches of professional standards or Code of Conduct</li>
-                            <li>Breaches of privacy</li>
                             <li>Unprofessional language or behaviour</li>
-                            <li>Sexual abuse or misconduct</li>
+                            <li>Non-compliance with College requirements</li>
                             <li>Contravention of legislation</li>
                         </ul>
                     </div>
@@ -646,7 +154,6 @@
                         </div>
                         <ul>
                             <li>Complaints unrelated to professional practice</li>
-                            <li>Conduct outside the practice of acupuncture, including social media activity</li>
                             <li>Requests for financial compensation</li>
                             <li>Concerns about other health professions</li>
                             <li>General dissatisfaction not tied to conduct</li>
@@ -661,7 +168,7 @@
             <!-- WHAT OUTCOME -->
             <section class="content-section" id="what-outcome">
                 <h2>
-                    <span class="section-icon">📋</span>
+                    <span class="section-icon"><i class="fa-solid fa-clipboard-list"></i></span>
                     What outcome can I expect?
                 </h2>
                 <p>The College's role is the <strong>protection of the public</strong>. If a member's professional actions are of concern, our objective is to remediate the situation and improve practice — not to award compensation.</p>
@@ -671,7 +178,7 @@
             <!-- THE PROCESS -->
             <section class="content-section" id="process">
                 <h2>
-                    <span class="section-icon">📁</span>
+                    <span class="section-icon"><i class="fa-solid fa-folder-open"></i></span>
                     The complaint process
                 </h2>
                 <p>When a complaint is received, the Complaints Director reviews it and has three options:</p>
@@ -707,7 +214,7 @@
             <!-- HEARINGS -->
             <section class="content-section" id="hearings">
                 <h2>
-                    <span class="section-icon">🏛</span>
+                    <span class="section-icon"><i class="fa-solid fa-gavel"></i></span>
                     Hearings
                 </h2>
                 <p>If referred to a hearing, the complainant's role is as a <strong>witness only</strong>. The hearing is a matter between the College and the member.</p>
@@ -727,7 +234,7 @@
             <!-- APPEALS -->
             <section class="content-section" id="appeals">
                 <h2>
-                    <span class="section-icon">↩</span>
+                    <span class="section-icon"><i class="fa-solid fa-rotate-left"></i></span>
                     Appeals
                 </h2>
                 <p>The decision of the hearing tribunal may be appealed by either the member or the College. The appeal is heard by an appeals committee, whose decision is further appealable to the <strong>Alberta Court of Appeal</strong>.</p>
@@ -736,7 +243,7 @@
             <!-- OMBUDSMAN -->
             <section class="content-section" id="ombudsman">
                 <h2>
-                    <span class="section-icon">📣</span>
+                    <span class="section-icon"><i class="fa-solid fa-bullhorn"></i></span>
                     Alberta Ombudsman
                 </h2>
                 <p>The complainant or the member may make a complaint to the Alberta Ombudsman if they believe the College's management of the complaint was administratively unfair.</p>
@@ -755,8 +262,8 @@
         </main>
     </div>
 
+    <!-- TOC scroll highlighting -->
     <script>
-        // Highlight active TOC item on scroll
         const sections = document.querySelectorAll('.content-section, .cta-section');
         const tocLinks = document.querySelectorAll('.toc-list a');
 
