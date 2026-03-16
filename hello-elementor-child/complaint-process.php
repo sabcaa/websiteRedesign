@@ -189,7 +189,7 @@ get_header(); ?>
         <!-- OMBUDSMAN -->
         <section class="content-section" id="ombudsman">
             <h2>
-                <span class="section-icon"><i class="fa-solid fa-bullhorn"></i></span>
+                <span class="section-icon"><i class="fa-solid fa-landmark"></i></span>
                 Alberta Ombudsman
             </h2>
             <p>The complainant or the member may make a complaint to the Alberta Ombudsman if they believe the College's management of the complaint was administratively unfair.</p>

@@ -42,3 +42,16 @@ function hello_child_dequeue_elementor() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_elementor', 20 ); // The 20 here is the run order priority, default is 10, so this runs after the enqueue function to remove the Elementor styles
+
+
+// Dequeue old Font Awesome v4 and load v6
+function hello_child_upgrade_font_awesome() {
+    wp_dequeue_style( 'font-awesome' );
+    wp_enqueue_style(
+        'font-awesome-6',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
+        array(),
+        '6.5.0'
+    );
+}
+add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
