@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Content with Sidebar TOC
+ * Template Name: Complaints
  */
 
 get_header(); ?>
