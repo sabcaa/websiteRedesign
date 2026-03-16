@@ -1,0 +1,30 @@
+/* ============================================================
+   applications.css
+   Styles specific to the applications page template.
+   Depends on variables defined in style.css.
+============================================================ */
+
+/* ============================================================
+   SECTION DIVIDER
+   Visual break between general info and application types
+============================================================ */
+.section-divider {
+    background: var(--blue);
+    border-radius: 8px;
+    padding: 28px 36px;
+    margin-bottom: 24px;
+}
+
+.section-divider h2 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    border: none;
+    padding: 0;
+}
+
+.section-divider p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.95rem;
+    margin: 0;
+}

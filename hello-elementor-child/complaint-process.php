@@ -17,40 +17,26 @@ get_header(); ?>
 <div class="page-layout">
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <nav class="toc-box" aria-label="On this page">
-            <div class="toc-header">On this page</div>
-            <ul class="toc-list">
-                <li><a href="#what-is-unprofessional-conduct">Unprofessional conduct</a></li>
-                <li><a href="#can-we-investigate">What we can investigate</a></li>
-                <li><a href="#what-outcome">What outcome to expect</a></li>
-                <li><a href="#process">The complaint process</a></li>
-                <li><a href="#hearings">Hearings</a></li>
-                <li><a href="#appeals">Appeals</a></li>
-                <li><a href="#ombudsman">Alberta Ombudsman</a></li>
-                <li><a href="#submit">Submit a complaint</a></li>
-            </ul>
-        </nav>
-        <div class="toc-cta">
-            <a href="#submit" class="btn btn-primary">Submit a complaint</a>
-            <a href="/contact-us/" class="btn btn-secondary">Contact us first</a>
-        </div>
-    </aside>
-
-    <!-- MOBILE TOC -->
-    <details class="mobile-toc">
-        <summary>On this page</summary>
-        <ul>
-            <li><a href="#what-is-unprofessional-conduct">Unprofessional conduct</a></li>
-            <li><a href="#can-we-investigate">What we can investigate</a></li>
-            <li><a href="#what-outcome">What outcome to expect</a></li>
-            <li><a href="#process">The complaint process</a></li>
-            <li><a href="#hearings">Hearings</a></li>
-            <li><a href="#appeals">Appeals</a></li>
-            <li><a href="#ombudsman">Alberta Ombudsman</a></li>
-            <li><a href="#submit">Submit a complaint</a></li>
-        </ul>
-    </details>
+     <?php get_template_part( 'template-parts/sidebar-toc', null, array(
+        'items' => array(
+            'Unprofessional conduct'  => '#what-is-unprofessional-conduct',
+            'What we can investigate' => '#can-we-investigate',
+            'What outcome to expect'  => '#what-outcome',
+            'The complaint process'   => '#process',
+            'Hearings'                => '#hearings',
+            'Appeals'                 => '#appeals',
+            'Alberta Ombudsman'       => '#ombudsman',
+            'Submit a complaint'      => '#submit',
+        ),
+        'cta_primary' => array(
+            'label' => 'Submit a complaint',
+            'url'   => '#submit',
+        ),
+        'cta_secondary' => array(
+            'label' => 'Contact us first',
+            'url'   => '/contact-us/',
+        ),
+    )); ?>
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
@@ -127,12 +113,12 @@ get_header(); ?>
                 <span class="section-icon"><i class="fa-solid fa-folder-open"></i></span>
                 The complaint process
             </h2>
-            <p>When a complaint is received, the Complaints Director reviews it and has three options:</p>
+            <p>Once a complaint is received and accepted, various outcomes are possible:</p>
 
             <div class="outcome-cards">
                 <div class="outcome-card">
                     <h4>Dismissal</h4>
-                    <p>Complaint is dismissed if there is likely insufficient evidence, or if the College does not have authority to investigate.</p>
+                    <p>Complaint may be dismissed. Dismissal can occur if there is insufficient evidence or if the College does not have authority to investigate.</p>
                 </div>
                 <div class="outcome-card">
                     <h4>Resolution</h4>
