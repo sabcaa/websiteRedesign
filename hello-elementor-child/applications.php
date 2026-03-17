@@ -120,7 +120,7 @@ get_header(); ?>
                     <option value="return-to-practice">Return to practice</option>
                     <option value="reinstatement">Reinstatement</option>
                     <option value="canadian-graduates">Canadian graduate outside Alberta</option>
-                    <option value="labour-mobility">Labour mobility (BC, NL, ON, QC, PEI)</option>
+                    <option value="labour-mobility">Labour mobility (BC, ON, QC, PEI, NL)</option>
                     <option value="international-graduates">International graduate</option>
                     <option value="courtesy">Courtesy registrant</option>
                 </select>
@@ -432,7 +432,7 @@ get_header(); ?>
                 )); ?>
 
                 <h3>Eligibility</h3>
-                <p>If you are currently a registered acupuncturist in British Colombia, Ontario, Quebec, PEI, or Newfoundland, you can apply for registration in Alberta under Alberta's <a href="https://www.alberta.ca/removing-barriers-to-labour-mobility.aspx">Labour Mobility Act (LMA)</a></p>
+                <p>If you are currently a registered acupuncturist in British Colombia, Ontario, Quebec, PEI, or Newfoundland, you can apply for registration in Alberta under Alberta's <a href="https://www.alberta.ca/removing-barriers-to-labour-mobility.aspx"><i>Labour Mobility Act</i> (LMA).</a></p>
 
                 <h3>Requirements</h3>
                 <table class="requirements-table">
