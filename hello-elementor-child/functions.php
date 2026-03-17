@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_styles' );
 
 // Dequeue Elementor CSS on pages using our custom templates.
 // Elementor global styles conflict with our white-on-dark-background colours.
-// Add new templates to the if condition as pages are updated, after the blue closing bracket add: || is_page_template  etc
+// Add new templates to the if condition as pages are updated, after the blue closing bracket ) add: || is_page_template  etc
 function hello_child_dequeue_elementor() {
     if ( is_page_template( 'complaint-process.php' ) || is_page_template( 'applications.php' ) ) {
         wp_dequeue_style( 'elementor-frontend' );
