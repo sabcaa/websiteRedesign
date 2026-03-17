@@ -26,11 +26,11 @@ get_header(); ?>
         ),
         'cta_primary' => array(
             'label' => 'Member portal',
-            'url'   => 'https://caa.alinityapp.com/',
+            'url'   => esc_url( get_field('urlmemberportal', 'option') ), // option means read url from options page in secure custom fields plugin
         ),
         'cta_secondary' => array(
             'label' => 'Portal support',
-            'url'   => '/resources/member-portal-support/',
+            'url'   => esc_url( get_field('urlportalsupport', 'option') ), // option means read url from options page in secure custom fields plugin
         ),
     )); ?>
 
@@ -45,7 +45,7 @@ get_header(); ?>
             <p>For a comprehensive walkthrough of how to register with the College, read the registration guide.</p>
             <?php get_template_part( 'template-parts/resource-download', null, array(
                 'title' => 'Registration Guide',
-                'url'   => WP_CONTENT_URL . '/uploads/2025/10/Registration-Guide.pdf',
+                'url' => get_field('docregistrationguide'),
                 'desc'  => 'A complete overview of the registration process.',
             )); ?>
         </section>
@@ -61,7 +61,7 @@ get_header(); ?>
             <ul>
                 <li><a href="/wp-content/uploads/2023/11/CAA-Letter-of-Standing-Fillable.pdf">Letter of standing</a> — if you are registered with other regulated health professions</li>
                 <li><a href="/wp-content/uploads/2023/01/Character-Reference-Form.pdf">Character and reputation reference form</a></li>
-                <li><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse and misconduct training</a></li>
+                <li><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse and misconduct training</a></li>
             </ul>
         </section>
 
@@ -142,7 +142,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'New Graduates Registration Requirements Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/New-Grads-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('docnewgradschecklist'),
                 )); ?>
                 <h3>Requirements</h3>
                 <table class="requirements-table">
@@ -155,7 +155,7 @@ get_header(); ?>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required</td></tr>
                         <tr><td>2 references</td><td class="req-check">Required</td></tr>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
                         <tr><td>Letter of standing</td><td class="req-check">If currently or previously registered in another jurisdiction</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required</td></tr>
                         <tr><td>Examinations (AARE)</td><td class="req-check">Must pass before applying</td></tr>
@@ -186,7 +186,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Provisional Registration Requirements Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Provisional-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('docprovisionalchecklist'),
                 )); ?>
                 
                 <h3>Eligibility</h3>
@@ -208,7 +208,7 @@ get_header(); ?>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required</td></tr>
                         <tr><td>2 references</td><td class="req-check">Required</td></tr>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
                         <tr><td>Letter of standing</td><td class="req-note">If currently or previously registered in another jurisdiction</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required</td></tr>
                         <tr><td>Examinations (AARE)</td><td>Must be registered for AARE</td></tr>
@@ -319,7 +319,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Reinstatement Registration Requirements Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/11/Reinstatement-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('docreinstatementchecklist'),
                 )); ?>
                 <h3>Application requirements</h3>
                 <table class="requirements-table">
@@ -332,7 +332,7 @@ get_header(); ?>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required</td></tr>
                         <tr><td>2 references</td><td class="req-check">Required</td></tr>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
                         <tr><td>Letter of standing</td><td class="req-note">If currently or previously registered in another jurisdiction</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required</td></tr>
                         <tr><td>Examinations (AARE)</td><td class="req-note">If applicable</td></tr>
@@ -385,8 +385,9 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Canadian-Educated Applicants Registration Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Canadian-Educated-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('doccanadianChecklist'),
                 )); ?>
+
                 <h3>Requirements</h3>
                 <p>These application requirements apply to applicants who have received substantially equivalent education and have never been registered in another Canadian jurisdiction.</p>
                 <table class="requirements-table">
@@ -399,7 +400,7 @@ get_header(); ?>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required</td></tr>
                         <tr><td>2 references</td><td class="req-check">Required</td></tr>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
                         <tr><td>Letter of standing</td><td class="req-check">If currently or previously registered in another jurisdiction</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required</td></tr>
                         <tr><td>Examinations (AARE)</td><td>Must pass before applying. Results valid for 3 years.</td></tr>
@@ -428,7 +429,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Labour Mobility Registration Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/LMA-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('doclmachecklist'),
                 )); ?>
 
                 <h3>Eligibility</h3>
@@ -443,7 +444,7 @@ get_header(); ?>
                         <tr><td>Proof of citizenship or work permit</td><td class="req-check">Required</td></tr>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required</td></tr>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
                         <tr><td>Letter of standing</td><td class="req-check">From current regulatory authority</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required</td></tr>
                         <tr><td>Jurisprudence examination</td><td class="req-check">Required</td></tr>
@@ -471,7 +472,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Internationally Educated Applicants Registration Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Internationally-Educated-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('docinternationalchecklist'),
                 )); ?>
                 <h3>Requirements</h3>
                 <table class="requirements-table">
@@ -485,7 +486,7 @@ get_header(); ?>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required</td></tr>
                         <tr><td>2 references</td><td class="req-check">Required</td></tr>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required</td></tr>
                         <tr><td>Letter of standing</td><td class="req-check">If currently or previously registered in another jurisdiction</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required</td></tr>
                         <tr><td>Examinations (AARE)</td><td>Must pass before applying. Results valid for 3 years.</td></tr>
@@ -509,7 +510,7 @@ get_header(); ?>
                         ),
                         array(
                             'q' => 'Where does the College accept educational credential assessments from?',
-                            'a' => 'You must obtain your assessment from a <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/how.html" target="_blank" rel="noopener noreferrer">designated organization listed on the Government of Canada website</a>.',
+                            'a' => 'You must obtain your assessment from a <a href="' . esc_url( get_field('urlecaassessment') ) . '" target="_blank" rel="noopener noreferrer">designated organization listed on the Government of Canada website</a>.',
                         ),
                         array(
                             'q' => 'Which types of educational credential assessments does the College accept?',
@@ -537,7 +538,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Courtesy Registration Requirements Checklist',
-                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Courtesy-Registration-Requirements-Checklist.pdf',
+                    'url' => get_field('doccourtesychecklist'),
                 )); ?>
                 
                 <h3>Eligibility</h3>
@@ -559,7 +560,7 @@ get_header(); ?>
                         <tr><td>First aid &amp; CPR</td><td class="req-check">Required (clinical only)</td></tr>
                         <tr><td>Criminal &amp; vulnerable sector check</td><td class="req-check">Required (clinical only)</td></tr>
                         <tr><td>2 references</td><td class="req-check">Required (clinical only)</td></tr>
-                        <tr><td><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required (clinical only)</td></tr>
+                        <tr><td><a href="<?php echo esc_url( get_field('urlsexualabuseconduct', 'option') ); ?>">Sexual abuse &amp; misconduct training</a></td><td class="req-check">Required (clinical only)</td></tr>
                         <tr><td>Letter of standing</td><td class="req-check">Required (clinical only)</td></tr>
                         <tr><td>Professional liability insurance</td><td class="req-check">Required (clinical only)</td></tr>
                         <tr><td>Jurisprudence examination</td><td class="req-check">Required (clinical only)</td></tr>

@@ -56,3 +56,14 @@ function hello_child_upgrade_font_awesome() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
+
+// Register Secure Custom Fields plugin Options Page for sitewide settings
+if ( function_exists( 'scf_add_options_page' ) ) {
+    scf_add_options_page( array(
+        'page_title' => 'Sitewide',
+        'menu_title' => 'Site Settings',
+        'menu_slug'  => 'sitewide',
+        'capability' => 'manage_options',
+        'redirect'   => false,
+    ));
+}
