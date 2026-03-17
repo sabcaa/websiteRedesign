@@ -424,12 +424,16 @@ get_header(); ?>
             <section class="content-section">
                 <h2>
                     <span class="section-icon"><i class="fa-solid fa-right-left"></i></span>
-                    Labour mobility (BC, NL, ON, QC, PEI)
+                    Labour mobility (BC, ON, QC, PEI, NL)
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Labour Mobility Registration Checklist',
                     'url'   => WP_CONTENT_URL . '/uploads/2025/09/LMA-Registration-Requirements-Checklist.pdf',
                 )); ?>
+
+                <h3>Eligibility</h3>
+                <p>If you are currently a registered acupuncturist in British Colombia, Ontario, Quebec, PEI, or Newfoundland, you can apply for registration in Alberta under Alberta's <a href="https://www.alberta.ca/removing-barriers-to-labour-mobility.aspx">Labour Mobility Act (LMA)</a></p>
+
                 <h3>Requirements</h3>
                 <table class="requirements-table">
                     <thead><tr><th>Requirement</th><th>Details</th></tr></thead>
@@ -449,7 +453,7 @@ get_header(); ?>
                     </tbody>
                 </table>
                 <h3>Steps</h3>
-                <p>If you are a current registrant in BC, Newfoundland, Ontario, or Quebec, you can apply for registration in Alberta under Alberta's <a href="https://www.alberta.ca/removing-barriers-to-labour-mobility.aspx">Labour Mobility Act (LMA)</a>.</p>
+                <p>To apply as an LMA applicant:</p>
                 <ol>
                     <li>Submit an LMA Registration Application.</li>
                     <li>After evaluation and approval, pay a pro-rated registration fee based on the quarter you are registering in. The College's registration cycle is April 1–March 31.</li>
