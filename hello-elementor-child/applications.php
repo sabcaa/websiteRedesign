@@ -221,7 +221,7 @@ get_header(); ?>
                     <li>Submit a Provisional Registration Application.</li>
                     <li>Submit a <a href="https://www.acupuncturealberta.ca/wp-content/uploads/2023/11/Supervision-Agreement-Form.pdf">Supervision Agreement Form</a>.</li>
                 </ol>
-                <h3>Frequently asked questions</h3>
+              
                 <?php get_template_part( 'template-parts/qa-block', null, array(
                     'items' => array(
                         array(
@@ -272,7 +272,7 @@ get_header(); ?>
                 </div>
                 <h3>Steps</h3>
                 <p>Submit a Non-practicing Application through the <a href="https://caa.alinityapp.com/">Member Portal</a>.</p>
-                <h3>Frequently asked questions</h3>
+        
                 <?php get_template_part( 'template-parts/qa-block', null, array(
                     'items' => array(
                         array(
@@ -450,7 +450,7 @@ get_header(); ?>
                     <li>Submit an LMA Registration Application.</li>
                     <li>After evaluation and approval, pay a pro-rated registration fee based on the quarter you are registering in. The College's registration cycle is April 1–March 31.</li>
                 </ol>
-                <h3>Frequently asked questions</h3>
+               
                 <?php get_template_part( 'template-parts/qa-block', null, array(
                     'items' => array(
                         array(
@@ -515,27 +515,27 @@ get_header(); ?>
                     <li>Upload an Educational Credential Assessment with your examination application.</li>
                     <li>Submit a General Registration Application after passing the AARE.</li>
                 </ol>
-                <h3>Educational credential assessment — frequently asked questions</h3>
+   
                 <?php get_template_part( 'template-parts/qa-block', null, array(
                     'items' => array(
                         array(
-                            'q' => 'Why is an assessment required?',
+                            'q' => 'Why is an educational credential assessment required?',
                             'a' => 'The assessment report ensures your education credentials are authentic and verifiable, and allows the College to compare your credentials to the Alberta equivalent.',
                         ),
                         array(
-                            'q' => 'Where does the College accept assessments from?',
+                            'q' => 'Where does the College accept educational credential assessments from?',
                             'a' => 'You must obtain your assessment from a <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/how.html" target="_blank" rel="noopener noreferrer">designated organization listed on the Government of Canada website</a>.',
                         ),
                         array(
-                            'q' => 'Which types of assessments does the College accept?',
+                            'q' => 'Which types of educational credential assessments does the College accept?',
                             'a' => '<ul><li>A basic assessment</li><li>A document-by-document evaluation</li></ul>',
                         ),
                         array(
-                            'q' => 'Where do I send the assessment?',
+                            'q' => 'Where do I send the educational credential assessment?',
                             'a' => 'The completed assessment can be forwarded directly to the College from the assessment service organization, or uploaded to your online exam application.',
                         ),
                         array(
-                            'q' => 'Who pays for the assessment?',
+                            'q' => 'Who pays for the educational credential assessment?',
                             'a' => 'Any costs associated with obtaining the required assessment results are the responsibility of the applicant.',
                         ),
                     ),
