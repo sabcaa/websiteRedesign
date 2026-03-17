@@ -45,7 +45,7 @@ get_header(); ?>
             <p>For a comprehensive walkthrough of how to register with the College, read the registration guide.</p>
             <?php get_template_part( 'template-parts/resource-download', null, array(
                 'title' => 'Registration Guide',
-                'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/10/Registration-Guide.pdf',
+                'url'   => WP_CONTENT_URL . '/uploads/2025/10/Registration-Guide.pdf',
                 'desc'  => 'A complete overview of the registration process.',
             )); ?>
         </section>
@@ -59,8 +59,8 @@ get_header(); ?>
             <p>All applications must be submitted on the <a href="https://caa.alinityapp.com/">Member Portal</a>. Refer to <a href="/resources/member-portal-support/">Member Portal Support</a> for help signing up and filling out application forms.</p>
             <p>Depending on your application type, you may also need to submit the following:</p>
             <ul>
-                <li><a href="https://www.acupuncturealberta.ca/wp-content/uploads/2023/11/CAA-Letter-of-Standing-Fillable.pdf">Letter of standing</a> — if you are registered with other regulated health professions</li>
-                <li><a href="https://www.acupuncturealberta.ca/wp-content/uploads/2023/01/Character-Reference-Form.pdf">Character and reputation reference form</a></li>
+                <li><a href="/wp-content/uploads/2023/11/CAA-Letter-of-Standing-Fillable.pdf">Letter of standing</a> — if you are registered with other regulated health professions</li>
+                <li><a href="/wp-content/uploads/2023/01/Character-Reference-Form.pdf">Character and reputation reference form</a></li>
                 <li><a href="https://caa-abuse-misconduct-course.netlify.app/">Sexual abuse and misconduct training</a></li>
             </ul>
         </section>
@@ -87,7 +87,7 @@ get_header(); ?>
             </h2>
             <p>Requirements vary by application type. Use the <a href="#find-application-type">application type finder below</a> to see the specific requirements for your situation, or download the relevant checklist.</p>
             <div class="callout">
-                <strong>Not sure which type applies to you?</strong> Read the <a href="https://www.acupuncturealberta.ca/wp-content/uploads/2025/10/Registration-Guide.pdf">Registration Guide</a> for a full overview, then use the finder below.
+                <strong>Not sure which type applies to you?</strong> Read the <a href="/wp-content/uploads/2025/10/Registration-Guide.pdf">Registration Guide</a> for a full overview, then use the finder below.
             </div>
         </section>
 
@@ -101,7 +101,7 @@ get_header(); ?>
             <p>The College reaches a decision on complete applications within <strong>20 days</strong>. Once a decision is reached, the College notifies the applicant.</p>
             <p>If an application is approved, the College requires the applicant to pay the pro-rated registration fee. At that point, a practice permit is issued.</p>
             <div class="callout">
-                For further information refer to the <a href="https://www.acupuncturealberta.ca/wp-content/uploads/2023/08/R.1.2-Registration-Policy.pdf">Registration Policy</a> and <a href="https://www.acupuncturealberta.ca/wp-content/uploads/2023/11/R.1.2.1-Registration-Procedure.pdf">Registration Procedure</a>.
+                For further information refer to the <a href="/wp-content/uploads/2023/08/R.1.2-Registration-Policy.pdf">Registration Policy</a> and <a href="/wp-content/uploads/2023/11/R.1.2.1-Registration-Procedure.pdf">Registration Procedure</a>.
             </div>
         </section>
 
@@ -120,7 +120,7 @@ get_header(); ?>
                     <option value="return-to-practice">Return to practice</option>
                     <option value="reinstatement">Reinstatement</option>
                     <option value="canadian-graduates">Canadian graduate outside Alberta</option>
-                    <option value="labour-mobility">Labour mobility (BC, NL, ON, QC)</option>
+                    <option value="labour-mobility">Labour mobility (BC, NL, ON, QC, PEI)</option>
                     <option value="international-graduates">International graduate</option>
                     <option value="courtesy">Courtesy registrant</option>
                 </select>
@@ -142,7 +142,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'New Graduates Registration Requirements Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/09/New-Grads-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/New-Grads-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 <h3>Requirements</h3>
                 <table class="requirements-table">
@@ -186,7 +186,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Provisional Registration Requirements Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/09/Provisional-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Provisional-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 
                 <h3>Eligibility</h3>
@@ -222,7 +222,7 @@ get_header(); ?>
                 <h3>Steps</h3>
                 <ol>
                     <li>Submit a Provisional Registration Application.</li>
-                    <li>Submit a <a href="https://www.acupuncturealberta.ca/wp-content/uploads/2023/11/Supervision-Agreement-Form.pdf">Supervision Agreement Form</a>.</li>
+                    <li>Submit a <a href="/wp-content/uploads/2023/11/Supervision-Agreement-Form.pdf">Supervision Agreement Form</a>.</li>
                 </ol>
               
                 <?php get_template_part( 'template-parts/qa-block', null, array(
@@ -319,7 +319,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Reinstatement Registration Requirements Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/11/Reinstatement-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/11/Reinstatement-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 <h3>Application requirements</h3>
                 <table class="requirements-table">
@@ -385,7 +385,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Canadian-Educated Applicants Registration Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/09/Canadian-Educated-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Canadian-Educated-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 <h3>Requirements</h3>
                 <p>These application requirements apply to applicants who have received substantially equivalent education and have never been registered in another Canadian jurisdiction.</p>
@@ -424,11 +424,11 @@ get_header(); ?>
             <section class="content-section">
                 <h2>
                     <span class="section-icon"><i class="fa-solid fa-right-left"></i></span>
-                    Labour mobility (BC, NL, ON, QC)
+                    Labour mobility (BC, NL, ON, QC, PEI)
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Labour Mobility Registration Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/09/LMA-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/LMA-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 <h3>Requirements</h3>
                 <table class="requirements-table">
@@ -467,7 +467,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Internationally Educated Applicants Registration Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/09/Internationally-Educated-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Internationally-Educated-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 <h3>Requirements</h3>
                 <table class="requirements-table">
@@ -533,7 +533,7 @@ get_header(); ?>
                 </h2>
                 <?php get_template_part( 'template-parts/resource-download', null, array(
                     'title' => 'Courtesy Registration Requirements Checklist',
-                    'url'   => 'https://www.acupuncturealberta.ca/wp-content/uploads/2025/09/Courtesy-Registration-Requirements-Checklist.pdf',
+                    'url'   => WP_CONTENT_URL . '/uploads/2025/09/Courtesy-Registration-Requirements-Checklist.pdf',
                 )); ?>
                 
                 <h3>Eligibility</h3>
