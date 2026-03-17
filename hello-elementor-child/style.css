@@ -504,6 +504,14 @@ em { font-style: italic; }
     overflow: hidden;
 }
 
+/* keeps the hero the width of the content */
+.page-hero-inner { 
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
 /* Decorative background circles */
 .page-hero::after {
     content: '';
