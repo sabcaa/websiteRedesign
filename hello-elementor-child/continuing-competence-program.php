@@ -209,20 +209,32 @@ get_header(); ?>
             </h2>
             <p>Every <strong>1 hour of meaningful learning</strong> is equal to 1 CCP credit.</p>
 
-            <h3>Acceptable learning activities</h3>
-            <ul>
-                <li><strong>Formal programs:</strong> online or in-person courses, seminars, workshops, presentations, lectures, conferences</li>
-                <li><strong>Self-directed studies:</strong> reading books, journals, websites</li>
-                <li><strong>Structured interactive activities:</strong> participation in study groups, peer review</li>
-            </ul>
+             <div class="info-grid">
+                <div class="info-box can">
+                    <div class="info-box-title">
+                        <span class="dot"></span>
+                        Acceptable learning activities
+                    </div>
+                
+                    <ul>
+                        <li><strong>Formal programs:</strong> online or in-person courses, seminars, workshops, presentations, lectures, conferences</li>
+                        <li><strong>Self-directed studies:</strong> reading books, journals, websites</li>
+                        <li><strong>Structured interactive activities:</strong> participation in study groups, peer review</li>
+                    </ul>
+                </div>
+                   <div class="info-box can">
+                    <div class="info-box-title">
+                        <span class="dot"></span>
+                        Acceptable supporting documents
+                    </div>
 
-            <h3>Acceptable supporting documents</h3>
-            <ul>
-                <li><strong>Formal programs:</strong> certificate of completion, receipt, course materials, attendance record, or screenshot of presentation slides</li>
-                <li><strong>Self-directed studies:</strong> screenshot of website, picture of book cover, copy of journal article, or learning notes</li>
-                <li><strong>Structured interactive activities:</strong> study material, presentation slides, or study/review notes</li>
-            </ul>
-
+                    <ul>
+                        <li><strong>Formal programs:</strong> certificate of completion, receipt, course materials, attendance record, or screenshot of presentation slides</li>
+                        <li><strong>Self-directed studies:</strong> screenshot of website, picture of book cover, copy of journal article, or learning notes</li>
+                        <li><strong>Structured interactive activities:</strong> study material, presentation slides, or study/review notes</li>
+                    </ul>
+                </div>
+            </div>
             <div class="callout-warning">
                 <strong>Herbology-only courses are not accepted</strong> for CCP credits.
             </div>

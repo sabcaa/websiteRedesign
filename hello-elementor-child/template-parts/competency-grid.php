@@ -16,7 +16,7 @@
 $competencies = array(
     array(
         'number' => 1,
-        'title'  => 'Interpersonal Skills',
+        'title'  => 'Interpersonal skills',
         'topics' => array(
             'Patient communication',
             'Therapeutic relationships',
@@ -35,7 +35,7 @@ $competencies = array(
     ),
     array(
         'number' => 3,
-        'title'  => 'Practice Management',
+        'title'  => 'Practice management',
         'topics' => array(
             'Clinical record keeping for acupuncturists',
             'Proper charting',
@@ -44,7 +44,7 @@ $competencies = array(
     ),
     array(
         'number' => 4,
-        'title'  => 'Acupuncture Foundations',
+        'title'  => 'Acupuncture foundations',
         'topics' => array(
             'Five elements',
             'Chinese medical classics',
@@ -56,7 +56,7 @@ $competencies = array(
     ),
     array(
         'number' => 5,
-        'title'  => 'Fundamentals of Biomedicine',
+        'title'  => 'Fundamentals of biomedicine',
         'topics' => array(
             'Red flags in acupuncture practice',
             'Acupuncture anatomy',
@@ -66,7 +66,7 @@ $competencies = array(
     ),
     array(
         'number' => 6,
-        'title'  => 'Acupuncture Diagnostics and Treatment',
+        'title'  => 'Acupuncture diagnostics and treatment',
         'topics' => array(
             'Specialized acupuncture style (e.g. Master Tung, Japanese acupuncture, Five Element)',
             'Acupuncture treatment for a specific category of dysfunctions/diseases',
@@ -76,7 +76,7 @@ $competencies = array(
     ),
     array(
         'number' => 7,
-        'title'  => 'Acupuncture Techniques',
+        'title'  => 'Acupuncture techniques',
         'topics' => array(
             'Moxibustion techniques',
             'Cupping techniques',
@@ -104,9 +104,9 @@ $competencies = array(
                 <?php echo esc_html( $competency['number'] ); ?>
             </div>
             <div class="competency-body">
-                <h4 class="competency-title">
+                <h3 class="competency-title">
                     <?php echo esc_html( $competency['title'] ); ?>
-                </h4>
+                </h3>
                 <ul class="competency-topics">
                     <?php foreach ( $competency['topics'] as $topic ) : ?>
                         <li><?php echo esc_html( $topic ); ?></li>

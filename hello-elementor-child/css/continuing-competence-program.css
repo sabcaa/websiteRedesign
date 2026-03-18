@@ -127,6 +127,60 @@
 
 .prorated-table tbody tr:last-child td { border-bottom: none; }
 
+
+/* ============================================================
+   CAN  INFO BOXES - green note boxes
+============================================================ */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.info-box {
+    border-radius: 6px;
+    padding: 20px 22px;
+}
+
+.info-box-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-box-title .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.info-box ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.info-box li {
+    font-size: 0.92rem;
+    margin-bottom: 7px;
+    line-height: 1.45;
+}
+
+.info-box.can {
+    background: var(--green-light);
+    border: 1px solid #C8DDA0;
+}
+.info-box.can .info-box-title { color: #4A6B1A; }
+.info-box.can .dot { background: var(--green); }
+.info-box.can li { color: #3D5A15; }
+
+
 /* ============================================================
    MOBILE
 ============================================================ */
