@@ -17,9 +17,26 @@ get_header(); ?>
 <div class="page-layout">
     <aside class="sidebar">
         <!-- TOC -->
+                
+        <?php get_template_part( 'template-parts/sidebar-toc', null, array(
+                'items' => array(
+                'Section label' => '#section-id',
+                'Another label' => '#another-id',
+                ),
+            )); 
+        ?>
     </aside>
+
     <main class="main-content">
         <!-- page content -->
+
+        <!--resource download template example -->
+         <?php get_template_part( 'template-parts/resource-download', null, array(
+                'title' => 'Registration Guide',
+                'url' => get_field('docregistrationguide'),
+                'desc'  => 'A complete overview of the registration process.',
+            )); ?>
+
     </main>
 </div>
 

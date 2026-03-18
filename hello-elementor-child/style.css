@@ -301,6 +301,80 @@ em { font-style: italic; }
 }
 
 /* ============================================================
+   COMPETENCY GRID
+   Used to display the 8 Alberta Acupuncture Competencies.
+   Rendered via template-parts/competency-grid.php
+   BLUE — informational, links to reference document
+============================================================ */
+.competency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.competency-card {
+    background: var(--blue-light);
+    border: 1px solid #C5D8EE;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Diagonal tab in top-right corner */
+.competency-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    background: var(--blue);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 6px 8px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1;
+}
+
+.competency-body {
+    padding: 20px 24px 20px 20px;
+    padding-right: 48px; /* avoid overlap with number tab */
+}
+
+.competency-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.competency-topics {
+    padding-left: 16px;
+    margin: 0;
+}
+
+.competency-topics li {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+    .competency-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
    PAGE LAYOUT — sidebar + content
    Used by all pages with a sidebar TOC.
 ============================================================ */
@@ -504,8 +578,7 @@ em { font-style: italic; }
     overflow: hidden;
 }
 
-/* keeps the hero the width of the content */
-.page-hero-inner { 
+.page-hero-inner {
     max-width: 1160px;
     margin: 0 auto;
     position: relative;
@@ -671,13 +744,13 @@ em { font-style: italic; }
 ============================================================ */
 a[href$=".pdf"]::after {
     content: '\f1c1'; /* fa-file-pdf unicode */
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-style: normal;
     display: inline-block;
     margin-left: 5px;
-    font-size: 1em;
-    color: var(--blue);
+    font-size: 0.85em;
+    color: var(--orange);
     text-decoration: none;
    
 }

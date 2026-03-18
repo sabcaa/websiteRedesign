@@ -157,7 +157,7 @@ get_header(); ?>
                 <li>If unprofessional conduct occurred, the appropriate remediation to protect the public</li>
             </ol>
             <div class="callout">
-                Once a hearing date is set, a <a href="/upcoming-hearings/">notification is posted on the College website</a> including the member's name, permit number, allegations, and hearing date.
+                Once a hearing date is set, <a href="/upcoming-hearings/">details are posted on the College website</a> including the member's name, permit number, and hearing date.
             </div>
             <p>Findings of unprofessional conduct are posted following the appeal period and remain for 5 years or until all conditions are complied with, whichever is later.</p>
             <p>Refer to the <a href="/wp-content/uploads/2025/06/Hearings-Handbook.pdf">Hearings Handbook</a> for a full overview of the process.</p>
