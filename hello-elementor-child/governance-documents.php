@@ -146,29 +146,8 @@ get_header(); ?>
                     </div>
                 </li>
 
-                <li class="doc-accordion-item">
-                    <div class="doc-accordion-trigger">
-                        <div class="doc-accordion-left">
-                            <span class="doc-name">G.1.7 Policy and Procedure Development and Management Policy</span>
-                        </div>
-                        <div class="doc-accordion-right">
-                            <a href="/wp-content/uploads/2022/09/G.1.7-Policy-and-Procedure-Development-and-Management-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
-                                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View document
-                            </a>
-                            <i class="fa-solid fa-chevron-down doc-accordion-chevron" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="doc-accordion-children">
-                        <div class="doc-row">
-                            <span class="doc-name">G.1.7.1 Policy and Procedure Development and Management Procedure</span>
-                            <a href="/wp-content/uploads/2022/10/G.1.7.1-Policy-and-Procedure-Development-and-Management-Procedure-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View document
-                            </a>
-                        </div>
-                    </div>
-                </li>
 
-                <!-- Standalone governance policies (no sub-documents) -->
+
                 <li class="doc-accordion-item">
                     <div class="doc-row">
                         <span class="doc-name">G.1.2 Delegation to the CEO-Registrar Policy</span>
@@ -209,6 +188,30 @@ get_header(); ?>
                         </a>
                     </div>
                 </li>
+
+                
+                <li class="doc-accordion-item">
+                    <div class="doc-accordion-trigger">
+                        <div class="doc-accordion-left">
+                            <span class="doc-name">G.1.7 Policy and Procedure Development and Management Policy</span>
+                        </div>
+                        <div class="doc-accordion-right">
+                            <a href="/wp-content/uploads/2022/09/G.1.7-Policy-and-Procedure-Development-and-Management-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+                                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View document
+                            </a>
+                            <i class="fa-solid fa-chevron-down doc-accordion-chevron" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="doc-accordion-children">
+                        <div class="doc-row">
+                            <span class="doc-name">G.1.7.1 Policy and Procedure Development and Management Procedure</span>
+                            <a href="/wp-content/uploads/2022/10/G.1.7.1-Policy-and-Procedure-Development-and-Management-Procedure-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View document
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
                 <li class="doc-accordion-item">
                     <div class="doc-row">
                         <span class="doc-name">G.1.8 Risk Oversight Policy</span>
@@ -235,8 +238,18 @@ get_header(); ?>
                 <span class="section-icon"><i class="fa-solid fa-gavel"></i></span>
                 Regulatory policies and procedures
             </h2>
-            <ul class="doc-accordion">
 
+            
+            <ul class="doc-accordion">
+                 <li class="doc-accordion-item">
+                    <div class="doc-row">
+                        <span class="doc-name">R.1.1 Continuing Competence Program Policy</span>
+                        <a href="/wp-content/uploads/2022/10/R.1.1-Continuing-Competence-Program-Policy.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View document
+                        </a>
+                    </div>
+                </li>
+                
                 <li class="doc-accordion-item">
                     <div class="doc-accordion-trigger">
                         <div class="doc-accordion-left">
@@ -331,15 +344,8 @@ get_header(); ?>
                     </div>
                 </li>
 
-                <!-- Standalone regulatory docs -->
-                <li class="doc-accordion-item">
-                    <div class="doc-row">
-                        <span class="doc-name">R.1.1 Continuing Competence Program Policy</span>
-                        <a href="/wp-content/uploads/2022/10/R.1.1-Continuing-Competence-Program-Policy.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View document
-                        </a>
-                    </div>
-                </li>
+       
+               
                 <li class="doc-accordion-item">
                     <div class="doc-row">
                         <span class="doc-name">Examination Application Guide</span>
