@@ -744,13 +744,13 @@ em { font-style: italic; }
 ============================================================ */
 a[href$=".pdf"]::after {
     content: '\f1c1'; /* fa-file-pdf unicode */
-    font-family: 'Font Awesome 6 Free';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     font-style: normal;
     display: inline-block;
     margin-left: 5px;
-    font-size: 0.85em;
-    color: var(--orange);
+    font-size: 1em;
+    color: var(--blue);
     text-decoration: none;
    
 }
