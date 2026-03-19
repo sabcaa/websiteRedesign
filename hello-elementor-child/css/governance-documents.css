@@ -52,6 +52,10 @@
     transition: color 0.15s ease;
 }
 
+.doc-row .doc-action {
+    margin-right: 23px; /* matches chevron width to keep alignment */
+}
+
 .doc-action:hover {
     color: var(--cyan);
     text-decoration: none;
