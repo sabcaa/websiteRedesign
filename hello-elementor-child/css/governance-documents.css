@@ -24,7 +24,7 @@
     justify-content: space-between;
     gap: 16px;
     padding: 11px 0;
-    border-bottom: 1px solid var(--border);
+   
 }
 
 .doc-row:last-child,
@@ -65,93 +65,13 @@
     font-size: 0.78rem;
 }
 
-/* ============================================================
-   ACCORDION DOCUMENT LIST
-   For policy sections with parent/child relationships
-============================================================ */
-.doc-accordion {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.doc-accordion-item {
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 0;
-}
-
-.doc-accordion-item:last-child {
-    border-bottom: none;
-}
-
-/* Parent row — clickable to expand */
-.doc-accordion-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 11px 0;
-    cursor: pointer;
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-}
-
-.doc-accordion-trigger:hover .doc-name {
-    color: var(--blue);
-}
-
-.doc-accordion-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    min-width: 0;
-}
-
-.doc-accordion-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
-}
-
-/* Expand/collapse chevron */
-.doc-accordion-chevron {
-    font-size: 0.75rem;
-    color: var(--text-light);
-    transition: transform 0.2s ease;
-    flex-shrink: 0;
-}
-
-.doc-accordion-item.is-open .doc-accordion-chevron {
-    transform: rotate(180deg);
-}
-
-/* Sub-documents */
-.doc-accordion-children {
-    display: none;
-    padding: 0 0 8px 20px;
+.doc-list--child {
+    padding-left: 24px;
     border-left: 2px solid var(--blue-light);
     margin-left: 4px;
-    margin-bottom: 8px;
 }
 
-.doc-accordion-item.is-open .doc-accordion-children {
-    display: block;
-}
-
-.doc-accordion-children .doc-row {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.doc-accordion-children .doc-row:last-child {
-    border-bottom: none;
-}
-
-.doc-accordion-children .doc-name {
+.doc-list--child .doc-name {
     font-size: 0.88rem;
     color: var(--text-light);
 }

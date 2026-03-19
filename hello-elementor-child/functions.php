@@ -57,6 +57,20 @@ function hello_child_upgrade_font_awesome() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
 
+
+// Load post and archive styles
+function hello_child_enqueue_post_styles() {
+    if ( is_single() || is_archive() || is_home() ) {
+        wp_enqueue_style(
+            'hello-child-post-styles',
+            get_stylesheet_directory_uri() . '/css/single.css',
+            array('hello-child-style')
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_post_styles' );
+
+
 // Register Secure Custom Fields plugin Options Page for sitewide settings
 if ( function_exists( 'scf_add_options_page' ) ) {
     scf_add_options_page( array(
