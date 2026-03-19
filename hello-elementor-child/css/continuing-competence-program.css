@@ -1,0 +1,191 @@
+/* ============================================================
+   continuing-competence-program.css
+   Styles specific to the CCP page template.
+   Depends on variables defined in style.css.
+============================================================ */
+
+/* ============================================================
+   MANDATORY ACTIVITIES TABLE
+   Slightly more compact than caa-table for this context
+============================================================ */
+.mandatory-activities-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin: 16px 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.mandatory-activities-table thead tr {
+    background: var(--blue);
+}
+
+.mandatory-activities-table thead th {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.mandatory-activities-table tbody td {
+    padding: 11px 14px;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.mandatory-activities-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.mandatory-activities-table tbody td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.activity-note {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   CREDIT SUMMARY BOX
+   Prominent display of the key requirement numbers
+============================================================ */
+.credit-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 16px 0;
+}
+
+.credit-summary-item {
+    background: var(--blue-light);
+    border: 1px solid #C5D8EE;
+    border-radius: 6px;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.credit-summary-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.credit-summary-label {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    line-height: 1.35;
+}
+
+/* ============================================================
+   PRORATED CREDITS TABLE
+============================================================ */
+.prorated-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.prorated-table thead tr { background: var(--blue); }
+
+.prorated-table thead th {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.prorated-table tbody td {
+    padding: 9px 14px;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--border);
+}
+
+.prorated-table tbody tr:last-child td { border-bottom: none; }
+
+
+/* ============================================================
+   CAN  INFO BOXES - green note boxes
+============================================================ */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.info-box {
+    border-radius: 6px;
+    padding: 20px 22px;
+}
+
+.info-box-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-box-title .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.info-box ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.info-box li {
+    font-size: 0.92rem;
+    margin-bottom: 7px;
+    line-height: 1.45;
+}
+
+.info-box.can {
+    background: var(--green-light);
+    border: 1px solid #C8DDA0;
+}
+.info-box.can .info-box-title { color: #4A6B1A; }
+.info-box.can .dot { background: var(--green); }
+.info-box.can li { color: #3D5A15; }
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+@media (max-width: 800px) {
+    .credit-summary {
+        grid-template-columns: 1fr;
+    }
+}
