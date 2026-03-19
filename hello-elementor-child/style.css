@@ -666,10 +666,9 @@ em { font-style: italic; }
    SITEWIDE TABLES
    Apply class="caa-table" to any table for this styling.
    TablePress tables get this automatically via the
-   .tablepress selector below.
+   . selector below.
 ============================================================ */
-.caa-table,
-.tablepress {
+.caa-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;
@@ -677,13 +676,11 @@ em { font-style: italic; }
 }
 
 /* Header row */
-.caa-table thead tr,
-.tablepress thead tr {
+.caa-table thead tr {
     background: var(--blue);
 }
 
-.caa-table thead th,
-.tablepress thead th {
+.caa-table thead th {
     color: var(--white);
     font-family: var(--font-heading);
     font-weight: 600;
@@ -696,8 +693,7 @@ em { font-style: italic; }
 }
 
 /* Body cells */
-.caa-table tbody td,
-.tablepress tbody td {
+.caa-table tbody td {
     padding: 11px 16px;
     color: var(--text-mid);
     border-bottom: 1px solid var(--border);
@@ -706,21 +702,18 @@ em { font-style: italic; }
 }
 
 /* First column slightly stronger */
-.caa-table tbody td:first-child,
-.tablepress tbody td:first-child {
+.caa-table tbody td:first-child {
     font-weight: 600;
     color: var(--text);
 }
 
 /* Remove border on last row */
-.caa-table tbody tr:last-child td,
-.tablepress tbody tr:last-child td {
+.caa-table tbody tr:last-child td {
     border-bottom: none;
 }
 
 /* Outer border */
-.caa-table,
-.tablepress {
+.caa-table {
     border: 1px solid var(--border);
     border-radius: 6px;
     overflow: hidden;
@@ -728,8 +721,7 @@ em { font-style: italic; }
 
 /* Mobile — allow horizontal scroll */
 @media (max-width: 800px) {
-    .caa-table,
-    .tablepress {
+    .caa-table {
         display: block;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
