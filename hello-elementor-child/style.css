@@ -189,6 +189,24 @@ em { font-style: italic; }
     }
 }
 
+
+.doc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 11px 0;
+   
+}
+
+
+.doc-name {
+    font-size: 0.93rem;
+    color: var(--text-mid);
+    flex: 1;
+    line-height: 1.4;
+}
+
 /* ============================================================
    SUBMIT CTA SECTION - eg on complaints page, about us
 ============================================================ */
@@ -819,4 +837,78 @@ a[href$=".pdf"]::after {
 /* Ensure the underline doesn't extend under the icon */
 a[href$=".pdf"] {
     text-decoration-skip-ink: auto;
+}
+
+
+
+/* ============================================================
+   DOCUMENT LIST
+   Used for all document lists on governance, portal support, also external link list
+============================================================ */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.doc-list li {
+    margin-bottom: 0;
+}
+
+.doc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 11px 0;
+   
+}
+
+.doc-row:last-child,
+.doc-list li:last-child .doc-row {
+    border-bottom: none;
+}
+
+.doc-name {
+    font-size: 0.93rem;
+    color: var(--text-mid);
+    flex: 1;
+    line-height: 1.4;
+}
+
+.doc-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.15s ease;
+}
+
+.doc-row .doc-action {
+    margin-right: 23px; /* matches chevron width to keep alignment */
+}
+
+.doc-action:hover {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+.doc-action i {
+    font-size: 0.78rem;
+}
+
+.doc-list--child {
+    padding-left: 24px;
+    border-left: 2px solid var(--blue-light);
+    margin-left: 4px;
+}
+
+.doc-list--child .doc-name {
+    font-size: 0.88rem;
+    color: var(--text-light);
 }
