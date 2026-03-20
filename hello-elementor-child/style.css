@@ -172,6 +172,38 @@ em { font-style: italic; }
 }
 .callout-warning strong { color: #B84A2A; }
 
+
+/* ============================================================
+   SUBMIT CTA SECTION - eg on complaints page, about us
+============================================================ */
+.cta-section {
+    background: var(--blue);
+    border-radius: 8px;
+    padding: 36px 40px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    scroll-margin-top: 24px;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--white) !important;
+    margin-bottom: 6px;
+    border: none;
+    padding: 0;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 0.95rem;
+    margin: 0;
+    max-width: 420px;
+}
+
 /* ============================================================
    RESOURCE DOWNLOAD CARD
    BLUE — information/resources to download
@@ -487,6 +519,26 @@ em { font-style: italic; }
     text-decoration: none;
 }
 .mobile-toc ul li a:hover { color: var(--blue); }
+
+/* ============================================================
+   RESPONSIVE VIDEO EMBED
+============================================================ */
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* ============================================================
    MAIN CONTENT AREA
