@@ -190,22 +190,6 @@ em { font-style: italic; }
 }
 
 
-.doc-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 11px 0;
-   
-}
-
-
-.doc-name {
-    font-size: 0.93rem;
-    color: var(--text-mid);
-    flex: 1;
-    line-height: 1.4;
-}
 
 /* ============================================================
    SUBMIT CTA SECTION - eg on complaints page, about us

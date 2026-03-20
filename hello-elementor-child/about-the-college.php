@@ -115,6 +115,35 @@ get_header(); ?>
         <?php echo do_shortcode('[table id=4 /]'); ?>
     </section>
 
+    <!-- LEGISLATION -->
+    <section class="content-section" id="legislation">
+        <h2>
+            <span class="section-icon"><i class="fa-solid fa-landmark"></i></span>
+            Legislation
+        </h2>
+        <p>The College of Acupuncturists of Alberta operates under the authority of the following Alberta legislation.</p>
+        <ul class="doc-list">
+            <li>
+                <div class="doc-row">
+                    <span class="doc-name"><em>Health Professions Act</em></span>
+                    <a href="https://kings-printer.alberta.ca/1266.cfm?page=H07.cfm&leg_type=Acts&isbncln=9780779860722" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <li>
+                <div class="doc-row">
+                    <span class="doc-name">Acupuncturists Profession Regulation</span>
+                    <a href="https://kings-printer.alberta.ca/1266.cfm?page=2020_255.cfm&leg_type=Regs&isbncln=9780779830213" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <li>
+                <div class="doc-row">
+                    <span class="doc-name">Health Professions Restricted Activity Regulation<</span>
+                    <a href="https://kings-printer.alberta.ca/1266.cfm?page=2023_022.cfm&leg_type=Regs&isbncln=9780779840748" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
     <!-- MEET THE COUNCIL CTA -->
     <div class="cta-section" id="council">
         <div>
