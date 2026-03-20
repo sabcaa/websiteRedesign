@@ -172,6 +172,22 @@ em { font-style: italic; }
 }
 .callout-warning strong { color: #B84A2A; }
 
+/* ============================================================
+   SIMPLE PAGE LAYOUT
+   Used by simple-page.php for pages without a sidebar TOC.
+   Content is authored in the WP editor.
+============================================================ */
+.simple-page-layout {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+}
+
+@media (max-width: 800px) {
+    .simple-page-layout {
+        padding: 24px 20px 60px;
+    }
+}
 
 /* ============================================================
    SUBMIT CTA SECTION - eg on complaints page, about us
@@ -526,6 +542,7 @@ em { font-style: italic; }
 .video-embed {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 ratio */
+    margin-top: 18px;
     height: 0;
     overflow: hidden;
     border-radius: 6px;

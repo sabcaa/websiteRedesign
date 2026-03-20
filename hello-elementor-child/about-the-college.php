@@ -10,6 +10,7 @@ get_header(); ?>
     'subtitle' => 'The College of Acupuncturists of Alberta regulates acupuncturists in Alberta in the public interest.',
     'breadcrumbs' => array(
         'Home' => '/',
+        'College' => 'College'
     )
 )); ?>
 
@@ -17,7 +18,7 @@ get_header(); ?>
 
     <!-- VISION & MISSION -->
     <section class="content-section" id="vision-mission">
-         <h2>Our mission and vision</h2>
+         <h2>Our vision and mission</h2>
         <div class="vision-mission-grid">
             <div class="vision-card">
                 <div class="vm-label">Our Vision</div>
@@ -27,19 +28,8 @@ get_header(); ?>
                 <div class="vm-label">Our Mission</div>
                 <p>To protect Albertans by establishing and upholding professional standards for acupuncturists through regulatory excellence.</p>
             </div>
-            <!---mission video-->
-            <div class="video-embed">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/tRbWnjjDPPo" 
-                    title="Vision, mission, values of the College" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
         </div>
+     
     </section>
 
     <!-- VALUES -->
@@ -72,6 +62,50 @@ get_header(); ?>
                 <p>Know that we can raise the bar higher together than any one person can alone.</p>
             </div>
         </div>
+    </section>
+
+    <!-- HISTORY, MISSION, AND WHAT WE DO VIDEOS-->
+    <section class="content-section" id="video-section">
+        <h2>Our story</h2>
+
+        <div class="video-grid">
+            <div class="video-embed">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/6hgD_PjGK_w" 
+                    title="History of the College" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="video-embed">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/Cj6jux7oayY" 
+                    title="What the College does" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+               
+         <!---mission video-->
+            <div class="video-embed">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/tRbWnjjDPPo" 
+                    title="Vision, mission, values of the College" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div >
     </section>
 
     <!-- COLLEGE VS ASSOCIATION -->

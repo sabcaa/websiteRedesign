@@ -8,7 +8,7 @@
    LAYOUT — full width centred, no sidebar
 ============================================================ */
 .who-we-are-layout {
-    max-width: 900px;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 40px 40px 80px;
 }
@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding: 8px;
 }
 
@@ -87,6 +87,22 @@
     color: var(--text-mid);
     line-height: 1.5;
     margin: 0;
+}
+
+/* ============================================================
+   VIDEO GRID
+============================================================ */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================================
