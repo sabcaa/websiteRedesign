@@ -56,8 +56,12 @@ get_header(); ?>
                         'q' => 'Can I use a first aid/CPR course to earn CCP credits?',
                         'a' => 'No, first aid/CPR are not part of the CCP program. Do not claim first aid/CPR for CCP credits. Doing so will put your registration renewal (and ability to practice) at risk.',
                     ),
+                     array(
+                        'q' => 'Do I need to take a first aid/CPR course every year if my certification is valid for 3 years?',
+                        'a' => 'No. You do not need to take a first aid/CPR course every year if your certification is valid for 3 years. You will need to take another first aid/CPR course to re-certify when your certification expires.',
+                    ),
                 ),
-                ));
+                ));              
             ?>
     </section>
     
@@ -136,6 +140,11 @@ get_header(); ?>
                 ),
                 ));
             ?>
+
+            
+        <div class="callout" style="margin-top: 16px;">
+            <strong>Still have questions?</strong> Contact the College at <a href="mailto:info@acupuncturealberta.ca">info@acupuncturealberta.ca</a> or 780-466-7787.
+        </div>
     </section>
 
 
