@@ -26,12 +26,12 @@ get_header(); ?>
 
         <?php get_template_part( 'template-parts/resource-download', null, array(
             'title' => 'Acupuncture Education Program Review Policy',
-            'url'   => esc_url( get_field('docAeprPolicy') ),
+            'url'   => esc_url( get_field('docaeprpolicy') ),
         )); ?>
 
         <?php get_template_part( 'template-parts/resource-download', null, array(
             'title' => 'Acupuncture Education Program Review Procedure',
-            'url'   => esc_url( get_field('docAeprProcedure') ),
+            'url'   => esc_url( get_field('docaeprprocedure') ),
         )); ?>
 
         <table class="caa-table" style="margin-top: 20px;">
