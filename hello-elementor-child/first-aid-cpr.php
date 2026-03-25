@@ -25,6 +25,10 @@ get_header(); ?>
                 'Acceptable training' => '#acceptable',
                 'Approved training agencies' => '#approved-agencies'
                 ),
+                'cta_primary' => array(
+                    'label' => 'Contact us',
+                    'url'  => '/contact-us/',
+                )
                 'cta_secondary' => array(
                     'label' => 'Training agencies',
                     'url' => 'https://ohs-pubstore.labour.alberta.ca/fa018',
@@ -142,9 +146,7 @@ get_header(); ?>
             ?>
 
             
-        <div class="callout" style="margin-top: 16px;">
-            <strong>Still have questions?</strong> Contact the College at <a href="mailto:info@acupuncturealberta.ca">info@acupuncturealberta.ca</a> or 780-466-7787.
-        </div>
+       
     </section>
 
 
