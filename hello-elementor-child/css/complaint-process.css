@@ -98,36 +98,6 @@
     margin: 0;
 }
 
-/* ============================================================
-   SUBMIT CTA SECTION
-============================================================ */
-.cta-section {
-    background: var(--blue);
-    border-radius: 8px;
-    padding: 36px 40px;
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    scroll-margin-top: 24px;
-}
-
-.cta-section h2 {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    color: var(--white) !important;
-    margin-bottom: 6px;
-    border: none;
-    padding: 0;
-}
-
-.cta-section p {
-    color: rgba(255, 255, 255, 0.78) !important;
-    font-size: 0.95rem;
-    margin: 0;
-    max-width: 420px;
-}
 
 /* ============================================================
    MOBILE BREAKPOINT — page specific overrides only

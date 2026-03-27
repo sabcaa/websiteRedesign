@@ -29,7 +29,12 @@ get_header(); ?>
 
     <main class="main-content">
         <!-- page content -->
-
+        <section class="content-section" id="id-for-TOC">
+            <h2>
+                <span class="section-icon"><i class="font-awesome-id"></i></span>
+                Heading
+            </h2>
+            
         <!--resource download template example -->
          <?php get_template_part( 'template-parts/resource-download', null, array(
                 'title' => 'Registration Guide',
