@@ -28,7 +28,7 @@ get_header(); ?>
                 'cta_primary' => array(
                     'label' => 'Contact us',
                     'url'  => '/contact-us/',
-                )
+                ),
                 'cta_secondary' => array(
                     'label' => 'Training agencies',
                     'url' => 'https://ohs-pubstore.labour.alberta.ca/fa018',

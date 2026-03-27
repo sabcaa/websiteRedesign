@@ -137,7 +137,7 @@ get_header(); ?>
             </li>
             <li>
                 <div class="doc-row">
-                    <span class="doc-name">Health Professions Restricted Activity Regulation<</span>
+                    <span class="doc-name">Health Professions Restricted Activity Regulation</span>
                     <a href="https://kings-printer.alberta.ca/1266.cfm?page=2023_022.cfm&leg_type=Regs&isbncln=9780779840748" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                 </div>
             </li>
