@@ -172,6 +172,15 @@ get_header(); ?>
             <p>The decision of the hearing tribunal may be appealed by either the member or the College. The appeal is heard by an appeals committee, whose decision is further appealable to the <strong>Alberta Court of Appeal</strong>.</p>
         </section>
 
+        <!--- FUNDS for therapy and counselling -->
+         <section class="content-section" id="ombudsman">
+            <h2>
+                <span class="section-icon"><i class="fa-solid fa-circle-info"></i></span>
+                Funds for therapy and counselling
+            </h2>
+            <p>Patients who have experienced sexual abuse or sexual misconduct by an acupuncturist are eligible for funding for therapy and counselling. Refer to <a href="/patient-relations/">Funds for Therapy and Counselling</a> for more information.
+        </section>
+
         <!-- OMBUDSMAN -->
         <section class="content-section" id="ombudsman">
             <h2>

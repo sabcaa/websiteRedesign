@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_styles' );
 // Elementor global styles conflict with our white-on-dark-background colours.
 // Add new templates to the if condition as pages are updated, after the blue closing bracket ) add: || is_page_template  etc
 function hello_child_dequeue_elementor() {
-    if ( is_page_template( 'complaint-process.php' ) || is_page_template( 'applications.php' ) || is_page_template( 'upcoming-hearings.php' ) || is_page_template('approved-acupuncture-education-programs') || is_page_template('continuing-competence-program') || is_page_template('governance-documents')) {
+    if ( is_page_template( 'complaint-process.php' ) || is_page_template( 'applications.php' ) || is_page_template( 'upcoming-hearings.php' ) || is_page_template('professional-liability-insurance.php') || is_page_template('practice-hours.php')  || is_page_template('corporate-plans-reports.php') || is_page_template( 'member-portal-support.php' ) || is_page_template('first-aid-cpr.php')  ||  is_page_template('registration-renewal-fees.php') || is_page_template('approved-acupuncture-education-programs.php') || is_page_template('continuing-competence-program.php') || is_page_template('governance-documents.php')  || is_page_template('about-the-college.php') || is_page_template('renewal.php') || is_page_template('simple-page.php')|| is_single() || is_archive() ) {
         wp_dequeue_style( 'elementor-frontend' );
         wp_dequeue_style( 'elementor-global-css' );
         wp_dequeue_style( 'e-animations' );
@@ -56,6 +56,20 @@ function hello_child_upgrade_font_awesome() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
+
+
+// Load post and archive styles
+function hello_child_enqueue_post_styles() {
+    if ( is_single() || is_archive() || is_home() ) {
+        wp_enqueue_style(
+            'hello-child-post-styles',
+            get_stylesheet_directory_uri() . '/css/single.css',
+            array('hello-child-style')
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_post_styles' );
+
 
 // Register Secure Custom Fields plugin Options Page for sitewide settings
 if ( function_exists( 'scf_add_options_page' ) ) {

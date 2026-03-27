@@ -173,6 +173,56 @@ em { font-style: italic; }
 .callout-warning strong { color: #B84A2A; }
 
 /* ============================================================
+   SIMPLE PAGE LAYOUT
+   Used by simple-page.php for pages without a sidebar TOC.
+   Content is authored in the WP editor.
+============================================================ */
+.simple-page-layout {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+}
+
+@media (max-width: 800px) {
+    .simple-page-layout {
+        padding: 24px 20px 60px;
+    }
+}
+
+
+
+/* ============================================================
+   SUBMIT CTA SECTION - eg on complaints page, about us
+============================================================ */
+.cta-section {
+    background: var(--blue);
+    border-radius: 8px;
+    padding: 36px 40px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    scroll-margin-top: 24px;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--white) !important;
+    margin-bottom: 6px;
+    border: none;
+    padding: 0;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 0.95rem;
+    margin: 0;
+    max-width: 420px;
+}
+
+/* ============================================================
    RESOURCE DOWNLOAD CARD
    BLUE — information/resources to download
    Rendered via template-parts/resource-download.php
@@ -489,6 +539,27 @@ em { font-style: italic; }
 .mobile-toc ul li a:hover { color: var(--blue); }
 
 /* ============================================================
+   RESPONSIVE VIDEO EMBED
+============================================================ */
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    margin-top: 18px;
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ============================================================
    MAIN CONTENT AREA
 ============================================================ */
 .main-content {
@@ -750,4 +821,78 @@ a[href$=".pdf"]::after {
 /* Ensure the underline doesn't extend under the icon */
 a[href$=".pdf"] {
     text-decoration-skip-ink: auto;
+}
+
+
+
+/* ============================================================
+   DOCUMENT LIST
+   Used for all document lists on governance, portal support, also external link list
+============================================================ */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.doc-list li {
+    margin-bottom: 0;
+}
+
+.doc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 11px 0;
+   
+}
+
+.doc-row:last-child,
+.doc-list li:last-child .doc-row {
+    border-bottom: none;
+}
+
+.doc-name {
+    font-size: 0.93rem;
+    color: var(--text-mid);
+    flex: 1;
+    line-height: 1.4;
+}
+
+.doc-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.15s ease;
+}
+
+.doc-row .doc-action {
+    margin-right: 23px; /* matches chevron width to keep alignment */
+}
+
+.doc-action:hover {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+.doc-action i {
+    font-size: 0.78rem;
+}
+
+.doc-list--child {
+    padding-left: 24px;
+    border-left: 2px solid var(--blue-light);
+    margin-left: 4px;
+}
+
+.doc-list--child .doc-name {
+    font-size: 0.88rem;
+    color: var(--text-light);
 }

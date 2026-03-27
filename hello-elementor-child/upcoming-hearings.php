@@ -32,7 +32,7 @@ get_header(); ?>
             <!--tablepress shortcode,  table has heading as part of it-->
             <?php echo do_shortcode('[table id=1 /]'); ?>
 
-            <p>A hearing is open to the public unless the Hearing Tribunal closes it. To pre-register to attend, fill out the online Virtual Hearings Observer Form. Observers and participants are expected to follow the virtual hearing guidelines when attending a hearing.</p>
+            <p>A hearing is open to the public unless the Hearing Tribunal closes it. To pre-register to attend, fill out the online <a href="<?php echo esc_url( get_field('urlobserverform') ); ?>">Virtual Hearings Observer Form</a>. Observers and participants are expected to follow the virtual hearing guidelines when attending a hearing.</p>
             <p>If you would like more information regarding hearings, contact our Hearings Director at hearingsdirector@acupuncturealberta.ca.</p>
 
              <?php get_template_part( 'template-parts/resource-download', null, array(
