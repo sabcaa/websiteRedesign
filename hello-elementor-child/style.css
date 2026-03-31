@@ -4,14 +4,6 @@ Template: hello-elementor
 */
 
 /* ============================================================
-   GOOGLE FONTS
-   Montserrat (heading), Noto Sans (body)
-   Note: In WordPress these are loaded via functions.php.
-   The @import here is only for standalone HTML mockups.
-============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans:wght@400;500;600&display=swap');
-
-/* ============================================================
    CSS VARIABLES — sitewide design tokens
 ============================================================ */
 :root {
@@ -681,6 +673,7 @@ em { font-style: italic; }
 }
 
 .page-hero h1 {
+    font-family: var(--font-heading);
     font-size: 2.4rem;
     font-weight: 700;
     color: var(--white) !important;
@@ -895,4 +888,162 @@ a[href$=".pdf"] {
 .doc-list--child .doc-name {
     font-size: 0.88rem;
     color: var(--text-light);
+}
+
+
+/* ============================================
+   SITE FOOTER
+   ============================================ */
+
+#site-footer {
+  background-color: #1B1D21;
+  color: #ffffff !important; 
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Main section --- */
+.footer-main {
+  padding: 60px 0 40px;
+}
+
+.footer-logo {
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  max-width: 240px;
+  height: auto;
+}
+
+/* --- Columns --- */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* --- Headings & divider --- */
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin: 0 0 12px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 0 0 20px;
+}
+
+/* --- About col text --- */
+.footer-col p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 20px;
+}
+
+/* --- Social icons --- */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Quick links --- */
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8) !important; 
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* --- Contact list --- */
+.footer-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact i {
+  margin-top: 3px;
+  flex-shrink: 0;
+  
+}
+
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.8) !important; 
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* --- Bottom bar --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 18px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
