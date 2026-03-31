@@ -14,6 +14,14 @@ function hello_child_enqueue_styles() {
         array('hello-elementor-style')
     );
 
+    // Load Google Fonts
+    wp_enqueue_style(
+        'hello-child-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans:wght@400;500;600&display=swap',
+        array(),
+        null
+    );
+
     // 3. Auto-load a page-specific CSS file if one exists
     if ( is_page() ) {
         $slug = get_post_field( 'post_name', get_the_ID() );
@@ -67,10 +75,26 @@ function hello_child_dequeue_elementor() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_elementor', 20 ); // The 20 here is the run order priority, default is 10, so this runs after the enqueue function to remove the Elementor styles
 
+function hello_child_dequeue_parent_extras() {
+    wp_dequeue_style( 'hello-elementor' );
+    wp_dequeue_style( 'hello-elementor-theme-style' );
+    wp_dequeue_style( 'hello-elementor-header-footer' );
+}
+add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_parent_extras', 20 );
 
-// Dequeue old Font Awesome v4 and load v6
+// Font Awesome v5 and 6
 function hello_child_upgrade_font_awesome() {
     wp_dequeue_style( 'font-awesome' );
+    
+    // FA5 (what Elementor loads on live)
+    wp_enqueue_style(
+        'font-awesome-5',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+        array(),
+        '5.15.3'
+    );
+    
+    // FA6
     wp_enqueue_style(
         'font-awesome-6',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -80,13 +104,6 @@ function hello_child_upgrade_font_awesome() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
 
-// Load Google Fonts
-wp_enqueue_style(
-    'hello-child-fonts',
-    'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans:wght@400;500;600&display=swap',
-    array(),
-    null
-);
 
 // Load post and archive styles
 function hello_child_enqueue_post_styles() {
