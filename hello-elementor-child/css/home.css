@@ -1,0 +1,283 @@
+/* ============================================
+   HOME PAGE
+   ============================================ */
+
+.home-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Shared section spacing --- */
+.home-page-audience,
+.home-recent-posts,
+.home-about,
+.home-acupuncture {
+    padding: 64px 0;
+}
+
+/* --- Shared divider --- */
+.section-divider,
+.audience-divider {
+    border: none;
+    border-top: 2px solid var(--border);
+    margin: 0 0 24px;
+}
+
+/* ============================================
+   AUDIENCE SECTION
+   ============================================ */
+
+.home-page-audience {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.audience-card {
+    padding: 32px;
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.audience-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.audience-card h2 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 12px;
+}
+
+.audience-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.audience-card ul li {
+    margin-bottom: 8px;
+}
+
+.audience-card ul li a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.audience-card ul li a:hover {
+    color: var(--blue-dark);
+    text-decoration: underline;
+}
+
+/* ============================================
+   RECENTLY AT THE COLLEGE
+   ============================================ */
+
+.home-recent-posts {
+    background: var(--white);
+}
+
+.home-recent-posts h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 12px;
+}
+
+.recent-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.recent-post-card {
+    padding: 28px;
+    background: var(--blue);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-post-title {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.recent-post-title a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+
+.recent-post-excerpt {
+    color: white;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+/*aka the button */
+.recent-post-link {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--white);
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.recent-post-link:hover {
+    background: #E4EEFA;
+}
+
+/* ============================================
+   ABOUT THE COLLEGE
+   ============================================ */
+
+.home-about {
+    background: var(--blue-light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.about-text h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 12px;
+}
+
+.about-text p {
+    color: var(--text-mid);
+    line-height: 1.7;
+    margin: 0 0 24px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--blue);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.home-btn:hover {
+    background: var(--blue-dark);
+}
+
+/* ============================================
+   WHAT IS ACUPUNCTURE?
+   ============================================ */
+
+.home-acupuncture {
+    background: var(--white);
+}
+
+.acupuncture-content {
+    max-width: 800px;
+}
+
+.acupuncture-content h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 12px;
+}
+
+.acupuncture-content p {
+    color: var(--text-mid);
+    line-height: 1.7;
+    margin: 0 0 16px;
+}
+
+.acupuncture-content ul {
+    color: var(--text-mid);
+    line-height: 1.7;
+    margin: 0 0 16px;
+    padding-left: 24px;
+}
+
+.acupuncture-content ul li {
+    margin-bottom: 6px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+    .audience-grid,
+    .recent-posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page-audience,
+    .home-recent-posts,
+    .home-about,
+    .home-acupuncture {
+        padding: 40px 0;
+    }
+}
