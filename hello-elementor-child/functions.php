@@ -45,6 +45,15 @@ function hello_child_enqueue_styles() {
             array('hello-child-style')
         );
     }
+    
+    // Load post, search, and archive styles
+    if ( is_single() || is_archive() || is_home() || is_search() || get_query_var('s') !== '' )  {
+        wp_enqueue_style(
+            'hello-child-post-styles',
+            get_stylesheet_directory_uri() . '/css/single.css',
+            array('hello-child-style')
+        );
+    }
 
     // 4. Header CSS and JS
     wp_enqueue_style(
@@ -59,6 +68,7 @@ function hello_child_enqueue_styles() {
         null,
         true
     );
+
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_styles' );
 
@@ -75,9 +85,15 @@ function hello_child_dequeue_elementor() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_elementor', 20 ); // The 20 here is the run order priority, default is 10, so this runs after the enqueue function to remove the Elementor styles
 
+function hello_child_dequeue_parent_extras() {
+    wp_dequeue_style( 'hello-elementor' );
+    wp_dequeue_style( 'hello-elementor-theme-style' );
+    wp_dequeue_style( 'hello-elementor-header-footer' );
+}
+add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_parent_extras', 20 );
 
 
-// Dequeue old Font Awesome v4 and load v6
+// Font awesome
 function hello_child_upgrade_font_awesome() {
     wp_dequeue_style( 'font-awesome' );
     wp_enqueue_style(
@@ -89,20 +105,6 @@ function hello_child_upgrade_font_awesome() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
 
-
-// Load post and archive styles
-function hello_child_enqueue_post_styles() {
-    if ( is_single() || is_archive() || is_home() ) {
-        wp_enqueue_style(
-            'hello-child-post-styles',
-            get_stylesheet_directory_uri() . '/css/single.css',
-            array('hello-child-style')
-        );
-    }
-}
-add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_post_styles' );
-
-
 // Register Secure Custom Fields plugin Options Page for sitewide settings
 if ( function_exists( 'scf_add_options_page' ) ) {
     scf_add_options_page( array(
@@ -113,6 +115,8 @@ if ( function_exists( 'scf_add_options_page' ) ) {
         'redirect'   => false,
     ));
 }
+
+
 
 // Register primary nav menu location
 register_nav_menus( array(
@@ -136,3 +140,4 @@ function hello_child_customizer( $wp_customize ) {
     ));
 }
 add_action( 'customize_register', 'hello_child_customizer' );
+
