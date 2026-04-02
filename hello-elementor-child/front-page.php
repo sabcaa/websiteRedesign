@@ -33,7 +33,7 @@ get_header();
                     <ul>
                         <li><a href="https://caa.alinityapp.com" target="_blank" rel="noopener">Member portal</a></li>
                         <li><a href="/resources/member-portal-support/" target="_blank" rel="noopener">Member portal support</a></li>
-                        <li><a href="/renewal/" target="_blank" rel="noopener">Registration renewal</a></li>
+                        <li><a href="/renewal/" target="_blank" rel="noopener">Practice permit renewal</a></li>
                         <li><a href="/continuing-competence-program/" target="_blank" rel="noopener">Continuing competence</a></li>
                     </ul>
                 </div>
@@ -108,7 +108,7 @@ get_header();
                 </div>
 
                 <div class="about-text">
-                    <h2>About the College of Acupuncturists of Alberta</h2>
+                    <h2>About the College of Acupuncturists<br>of Alberta</h2>
                     <hr class="section-divider">
                     <p>The College of Acupuncturists of Alberta regulates the practice of acupuncture in Alberta. We protect Albertans by establishing and upholding professional standards for acupuncturists through regulatory excellence.</p>
                     <a href="/about-the-college/" class="btn btn-primary">About us</a>

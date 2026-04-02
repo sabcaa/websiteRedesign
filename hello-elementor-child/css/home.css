@@ -22,6 +22,7 @@
     border: none;
     border-top: 2px solid var(--blue);
     margin: 0 0 24px;
+    width: 70%;
 }
 
 /* ============================================
@@ -236,6 +237,7 @@
 .acupuncture-content {
     max-width: 800px;
     background-color: var(--white);
+    border-radius: 8px;
 }
 
 .acupuncture-content h2 {
