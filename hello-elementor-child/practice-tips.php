@@ -25,7 +25,7 @@ get_header(); ?>
             <li>
                 <div class="doc-row">
                     <span class="doc-name">Interim guidance for acupuncturists on the use of artificial intelligence</span>
-                    <a href="wp-content/uploads/2026/02/Interim-guidance-on-the-use-of-AI.pdf" class="doc-action">
+                    <a href="/wp-content/uploads/2026/02/Interim-guidance-on-the-use-of-AI.pdf" class="doc-action">
                        View guidance 
                     </a>
                 </div>
@@ -43,7 +43,7 @@ get_header(); ?>
             <li>
                 <div class="doc-row">
                     <span class="doc-name">Acupuncturists performing personal services</span>
-                    <a href="wp-content/uploads/2024/03/Acupuncturists-Performing-Personal-Services_Final.pdf" class="doc-action">
+                    <a href="/wp-content/uploads/2024/03/Acupuncturists-Performing-Personal-Services_Final.pdf" class="doc-action">
                        Go to tip </i> 
                     </a>
                 </div>

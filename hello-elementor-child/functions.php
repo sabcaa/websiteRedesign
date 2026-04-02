@@ -14,6 +14,14 @@ function hello_child_enqueue_styles() {
         array('hello-elementor-style')
     );
 
+    // Load Google Fonts
+    wp_enqueue_style(
+        'hello-child-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans:wght@400;500;600&display=swap',
+        array(),
+        null
+    );
+
     // 3. Auto-load a page-specific CSS file if one exists
     if ( is_page() ) {
         $slug = get_post_field( 'post_name', get_the_ID() );
@@ -28,6 +36,39 @@ function hello_child_enqueue_styles() {
             );
         }
     }
+
+    // Load front page CSS
+    if ( is_front_page() ) {
+        wp_enqueue_style(
+            'hello-child-page-home',
+            get_stylesheet_directory_uri() . '/css/home.css',
+            array('hello-child-style')
+        );
+    }
+    
+    // Load post, search, and archive styles
+    if ( is_single() || is_archive() || is_home() || is_search() || get_query_var('s') !== '' )  {
+        wp_enqueue_style(
+            'hello-child-post-styles',
+            get_stylesheet_directory_uri() . '/css/single.css',
+            array('hello-child-style')
+        );
+    }
+
+    // 4. Header CSS and JS
+    wp_enqueue_style(
+        'hello-child-header',
+        get_stylesheet_directory_uri() . '/css/header.css',
+        array('hello-child-style')
+    );
+    wp_enqueue_script(
+        'hello-child-header',
+        get_stylesheet_directory_uri() . '/js/header.js',
+        array(),
+        null,
+        true
+    );
+
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_styles' );
 
@@ -44,8 +85,15 @@ function hello_child_dequeue_elementor() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_elementor', 20 ); // The 20 here is the run order priority, default is 10, so this runs after the enqueue function to remove the Elementor styles
 
+function hello_child_dequeue_parent_extras() {
+    wp_dequeue_style( 'hello-elementor' );
+    wp_dequeue_style( 'hello-elementor-theme-style' );
+    wp_dequeue_style( 'hello-elementor-header-footer' );
+}
+add_action( 'wp_enqueue_scripts', 'hello_child_dequeue_parent_extras', 20 );
 
-// Dequeue old Font Awesome v4 and load v6
+
+// Font awesome
 function hello_child_upgrade_font_awesome() {
     wp_dequeue_style( 'font-awesome' );
     wp_enqueue_style(
@@ -57,20 +105,6 @@ function hello_child_upgrade_font_awesome() {
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_upgrade_font_awesome', 20 );
 
-
-// Load post and archive styles
-function hello_child_enqueue_post_styles() {
-    if ( is_single() || is_archive() || is_home() ) {
-        wp_enqueue_style(
-            'hello-child-post-styles',
-            get_stylesheet_directory_uri() . '/css/single.css',
-            array('hello-child-style')
-        );
-    }
-}
-add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_post_styles' );
-
-
 // Register Secure Custom Fields plugin Options Page for sitewide settings
 if ( function_exists( 'scf_add_options_page' ) ) {
     scf_add_options_page( array(
@@ -81,3 +115,29 @@ if ( function_exists( 'scf_add_options_page' ) ) {
         'redirect'   => false,
     ));
 }
+
+
+
+// Register primary nav menu location
+register_nav_menus( array(
+    'primary' => __( 'Primary Navigation', 'hello-child' ),
+) );
+
+// Notice banner in Customizer
+function hello_child_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'hello_child_notice', array(
+        'title'    => __( 'Notice Banner', 'hello-child' ),
+        'priority' => 30,
+    ));
+    $wp_customize->add_setting( 'notice_banner_text', array(
+        'default'           => '',
+        'sanitize_callback' => 'wp_kses_post',
+    ));
+    $wp_customize->add_control( 'notice_banner_text', array(
+        'label'   => __( 'Banner text (leave empty to hide)', 'hello-child' ),
+        'section' => 'hello_child_notice',
+        'type'    => 'textarea',
+    ));
+}
+add_action( 'customize_register', 'hello_child_customizer' );
+
