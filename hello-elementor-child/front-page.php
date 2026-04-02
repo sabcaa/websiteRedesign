@@ -77,7 +77,7 @@ get_header();
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
                         <p class="recent-post-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20, '&hellip;' ); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="recent-post-link">Read more</a>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read more</a>
                     </div>
                 <?php
                     endwhile;
@@ -111,7 +111,7 @@ get_header();
                     <h2>About the College of Acupuncturists of Alberta</h2>
                     <hr class="section-divider">
                     <p>The College of Acupuncturists of Alberta regulates the practice of acupuncture in Alberta. We protect Albertans by establishing and upholding professional standards for acupuncturists through regulatory excellence.</p>
-                    <a href="/about-the-college/" class="home-btn">About us</a>
+                    <a href="/about-the-college/" class="btn btn-primary">About us</a>
                 </div>
 
             </div>

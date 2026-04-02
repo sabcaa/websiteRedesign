@@ -20,7 +20,7 @@
 .section-divider,
 .audience-divider {
     border: none;
-    border-top: 2px solid var(--border);
+    border-top: 2px solid var(--blue);
     margin: 0 0 24px;
 }
 
@@ -30,7 +30,7 @@
 
 .home-page-audience {
     background: var(--white);
-    border-bottom: 1px solid var(--border);
+    
 }
 
 .audience-grid {
@@ -44,6 +44,7 @@
     background: var(--bg-page);
     border: 1px solid var(--border);
     border-radius: 8px;
+    box-shadow: 0 2px 2 var(--green);
 }
 
 .audience-card img {
@@ -226,11 +227,15 @@
    ============================================ */
 
 .home-acupuncture {
-    background: var(--white);
+    background-image: url("/wp-content/uploads/2022/08/acupuncture-alberta-scrollx-image-faq-scaled_1920x1280.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .acupuncture-content {
     max-width: 800px;
+    background-color: var(--white);
 }
 
 .acupuncture-content h2 {

@@ -803,18 +803,9 @@ em { font-style: italic; }
    invisible to screen readers.
 ============================================================ */
 a[href$=".pdf"]::after {
-    content: '\f1c1';
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-style: normal;
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 1em;
+    content: ' [PDF]';
+    font-size: 0.8em;
     color: var(--blue);
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    font-variant: normal;
-    text-rendering: auto;
 }
 
 /* Ensure the underline doesn't extend under the icon */
