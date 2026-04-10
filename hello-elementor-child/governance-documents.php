@@ -18,6 +18,7 @@ get_header(); ?>
 
     <?php get_template_part( 'template-parts/sidebar-toc', null, array(
         'items' => array(
+            'Legislation'                               => '#legislation',
             'Bylaws'                                    => '#bylaws',
             'Regulatory committee terms of reference'  => '#terms-of-reference',
             'Governance policies and procedures'        => '#governance-policies',
