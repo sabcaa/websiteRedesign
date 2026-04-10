@@ -30,6 +30,34 @@ get_header(); ?>
 
     <main class="main-content">
 
+         <!-- LEGISLATION -->
+        <section class="content-section" id="legislation">
+            <h2>
+                <span class="section-icon"><i class="fa-solid fa-landmark"></i></span>
+                Legislation
+            </h2>
+             <ul class="doc-list">
+                <li>
+                    <div class="doc-row">
+                        <span class="doc-name"><em>Health Professions Act</em></span>
+                        <a href="https://kings-printer.alberta.ca/1266.cfm?page=H07.cfm&leg_type=Acts&isbncln=9780779860722" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="doc-row">
+                        <span class="doc-name">Acupuncturists Profession Regulation</span>
+                        <a href="https://kings-printer.alberta.ca/1266.cfm?page=2020_255.cfm&leg_type=Regs&isbncln=9780779830213" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="doc-row">
+                        <span class="doc-name">Health Professions Restricted Activity Regulation</span>
+                        <a href="https://kings-printer.alberta.ca/1266.cfm?page=2023_022.cfm&leg_type=Regs&isbncln=9780779840748" class="doc-action" target="_blank" rel="noopener noreferrer">View document <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    
         <!-- BYLAWS -->
         <section class="content-section" id="bylaws">
             <h2>
@@ -121,62 +149,7 @@ get_header(); ?>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.2 Delegation to the CEO-Registrar Policy</span>
-                        <a href="/wp-content/uploads/2023/11/G.1.2-Delegation-to-the-CEO-Registrar-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.3 Succession Planning Policy</span>
-                        <a href="/wp-content/uploads/2022/09/G.1.3-Succession-Planning-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.4 Strategic Planning Policy</span>
-                        <a href="/wp-content/uploads/2022/09/G.1.4-Strategic-Planning-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.5 Programs and Services Policy</span>
-                        <a href="/wp-content/uploads/2022/09/G.1.5-Programs-and-Services-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.6 Financial Oversight Policy</span>
-                        <a href="/wp-content/uploads/2022/09/G.1.6-Financial-Oversight-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.7 Policy and Procedure Development and Management Policy</span>
-                        <a href="/wp-content/uploads/2022/09/G.1.7-Policy-and-Procedure-Development-and-Management-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                    <ul class="doc-list doc-list--child">
-                        <li>
-                            <div class="doc-row">
-                                <span class="doc-name">G.1.7.1 Policy and Procedure Development and Management Procedure</span>
-                                <a href="/wp-content/uploads/2022/10/G.1.7.1-Policy-and-Procedure-Development-and-Management-Procedure-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.8 Risk Oversight Policy</span>
-                        <a href="/wp-content/uploads/2022/09/G.1.8-Risk-Oversight-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">G.1.9 Investment Policy</span>
-                        <a href="/wp-content/uploads/2022/10/G.1.9-Investment-Policy-v2-_WebNoAppendices.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                </li>
+               
             </ul>
         </section>
 
@@ -351,26 +324,7 @@ get_header(); ?>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <div class="doc-row">
-                        <span class="doc-name">O.4.0 Records Management Policy</span>
-                        <a href="/wp-content/uploads/2023/08/O.4.0-Records-Management-Policy-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                    </div>
-                    <ul class="doc-list doc-list--child">
-                        <li>
-                            <div class="doc-row">
-                                <span class="doc-name">O.4.0.1 Records Management Procedure</span>
-                                <a href="/wp-content/uploads/2023/08/O.4.0.1-Records-Management-Procedure-1.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="doc-row">
-                                <span class="doc-name">O.4.0.2 Records Request Form</span>
-                                <a href="/wp-content/uploads/2023/08/O.4.0.2-Records-Request-Form.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                
             </ul>
         </section>
 
