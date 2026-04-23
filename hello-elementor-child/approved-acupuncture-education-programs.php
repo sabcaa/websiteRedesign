@@ -45,10 +45,16 @@ get_header(); ?>
             </thead>
             <tbody>
                 <tr>
-                    <td>ACATCM</td>
+                    <td>ACATCM - diploma</td>
                     <td>Calgary</td>
                     <td>Provisional Approval</td>
                     <td>Spring 2026</td>
+                </tr>
+                <tr>
+                    <td>ACATCM - degree</td>
+                    <td>Calgary</td>
+                    <td>Preliminary Approval</td>
+                    <td>Spring 2027</td>
                 </tr>
                 <tr>
                     <td>CCTCMA</td>
