@@ -45,7 +45,7 @@
     background: var(--bg-page);
     border: 1px solid var(--border);
     border-radius: 8px;
-    box-shadow: 0 2px 2 var(--green);
+    box-shadow: 0 2px 2px var(--green);
 }
 
 .audience-card img {

@@ -231,6 +231,21 @@ get_header(); ?>
                 </li>
                 <li>
                     <div class="doc-row">
+                        <span class="doc-name">R.1.6 Complaint Review Management Policy</span>
+                        <a href="/wp-content/uploads/2026/04/R.1.6-Complaint-Review-Management-Policy.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                    </div>
+                    <ul class="doc-list doc-list--child">
+                        <li>
+                            <div class="doc-row">
+                                <span class="doc-name">R.1.6.1 Complaint Review Management Procedure</span>
+                                <a href="/wp-content/uploads/2026/04/R.1.6.1-Complaint-Review-Management-Procedure.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="doc-row">
                         <span class="doc-name">Examination Application Guide</span>
                         <a href="/wp-content/uploads/2026/01/Examination-Application-Guide.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
                     </div>
