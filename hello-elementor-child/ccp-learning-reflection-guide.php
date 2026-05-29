@@ -17,6 +17,17 @@ get_header(); ?>
 
 <div class="page-layout">
 
+    <?php get_template_part( 'template-parts/sidebar-toc', null, array(
+        'items' => array(
+            'Overview'              => '#overview',
+            'Learning summary'      => '#learningSummary',
+            'Learning reflection'    => '#learningReflection',
+            
+        ),
+      
+    )); ?>
+
+
 <main class="main-content">
     <section class="content-section" id="overview">
             <h2>
@@ -38,6 +49,12 @@ get_header(); ?>
 
         <!-- tables -->
          <table class="caa-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Learning summary example</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
                 <td width="56">❌</td>
@@ -61,6 +78,12 @@ get_header(); ?>
         </table>
         
         <table class="caa-table">
+             <thead>
+                <tr>
+                    <th></th>
+                    <th>Learning summary example</th>
+                </tr>
+            </thead>
             <tbody>
             <tr>
             <td width="56">❌</td>
@@ -84,6 +107,12 @@ get_header(); ?>
         </table>
        
         <table class="caa-table">
+             <thead>
+                <tr>
+                    <th></th>
+                    <th>Learning summary example</th>
+                </tr>
+            </thead>
             <tbody>
             <tr>
             <td width="56">❌</td>
@@ -119,6 +148,12 @@ get_header(); ?>
         <!--tables -->
         
         <table class="caa-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Learning reflection example</th>
+                </tr>
+            </thead>
             <tbody>
             <tr>
             <td width="56">❌</td>
@@ -134,19 +169,27 @@ get_header(); ?>
             <td width="56">✅</td>
             <td width="567">
             <p>To strengthen your learning reflection, identify the assessment tools or clinical reasoning skills you used, explain how they help you understand the patient&rsquo;s condition, and describe how the findings guide your treatment plan:<br /> </p>
-            <p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I have learned to use the straight leg raise test and Slump test when assessing patients with lower extremity complaints. These tests help me evaluate whether the patient&rsquo;s symptoms may be related to lumbar nerve involvement rather than only local muscle pain. When the findings are positive, I can explain to the patient why their pain may be originating from the lumbar spine and why treatment may include targeting the Huatuojiaji points. This helps me connect assessment findings with patient education and treatment planning.</p>
+            <ul>
+                <li>I have learned to use the straight leg raise test and Slump test when assessing patients with lower extremity complaints. These tests help me evaluate whether the patient&rsquo;s symptoms may be related to lumbar nerve involvement rather than only local muscle pain. When the findings are positive, I can explain to the patient why their pain may be originating from the lumbar spine and why treatment may include targeting the Huatuojiaji points. This helps me connect assessment findings with patient education and treatment planning.</li>
+            </ul>
             </td>
             </tr>
             </tbody>
         </table>
 
         
-        <table>
+        <table  class="caa-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Learning reflection example</th>
+                </tr>
+            </thead>
             <tbody>
             <tr>
             <td width="56">❌</td>
             <td width="567">
-            <p>Too general:</p>
+            <p>Too general</p>
                 <ul>
                 <li>The marketing class was beneficial because I learned how to better attract new patients.</li>
                 <li>I found the marketing class valuable because it gave me new tools and strategies for attracting new patients.</li>
@@ -165,12 +208,18 @@ get_header(); ?>
             </tbody>
         </table>
         
-        <table>
+        <table  class="caa-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Learning reflection example</th>
+                </tr>
+            </thead>
             <tbody>
             <tr>
             <td width="56">❌</td>
             <td width="567">
-            <p>Too general:</p>
+            <p>Too general</p>
             <ul>
                 <li> I now offer cosmetic acupuncture.</li>
             </ul>
