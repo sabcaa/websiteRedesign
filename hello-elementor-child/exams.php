@@ -57,9 +57,10 @@ get_header(); ?>
                 <li>Acupuncture Certification of the National Certification Board for Acupuncture and Herbal Medicine exam</li>
                 <li>California Acupuncture Licensing Examination </li>
             </ul>
+        
 
         <div class="callout-warning">
-                <strong>Important:</strong> An Alberta-based applicant who writes the Acupuncture Certification of the National Certification Board for Acupuncture and Herbal Medicine through the College <strong>does not</strong> gain the ability to be licensed or work in the United States. 
+                <strong>Important:</strong> An Alberta-based applicant who writes the Acupuncture Certification of the National Certification Board for Acupuncture and Herbal Medicine through the College <strong>does not</strong> gain the ability to be licensed or work in the United States. The College is currently working on an updated registration process to accommodate candidates who choose the NCBAHM exam.
             </div>
 
      </section>
