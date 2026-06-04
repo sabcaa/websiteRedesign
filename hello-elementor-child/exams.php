@@ -17,10 +17,10 @@ get_header(); ?>
 
 <div class="page-layout">
 
- <main class="main-content">
+<main class="main-content">
 
  <!-- End of practicals exam transitions -->
-    <section class="content-section>
+    <section class="content-section">
         <h2>
             <span class="section-icon"><i class="fa-solid fa-exclamation"></i></span>
             Changes to exams effective June 2026
@@ -71,10 +71,11 @@ get_header(); ?>
             <span class="section-icon"><i class="fa-solid fa-circle-info"></i></span>
             Alberta Acupuncture Registration Examinations information
         </h2>
-        <p>The Alberta Acupuncture Registration Examinations includes the following components: 
+        <p>The Alberta Acupuncture Registration Examinations include the following components: 
             <ul>
                 <li>Pan-Canadian Acupuncturists Examination administered by CARB-TCMPA</li>
-                <li>Online Safety Module offered by the College
+                <li>Online Safety Module offered by the College</li>
+                
         <p>For the most current and accurate information regarding the Pan-Canadian Examinations, refer directly to the&nbsp;<a href="https://carb-tcmpa.org/">CARB-TCMPA website</a>&nbsp;and communicate with CARB-TCMPA for any inquiries.</p>
         <h3>Important dates</h3>
         <table>
@@ -114,8 +115,8 @@ get_header(); ?>
 
         <p>Applicants educated in Alberta can apply for examinations if:</p>
         <ul>
-            <li>The applicant has obtained a diploma from a program in acupuncture; OR</li>
-            <li>At the time of application, the applicant is enrolled in and actively completing the final year of their acupuncture education.</li>
+            <li>The applicant has obtained a diploma from an approved acupuncture education program; OR</li>
+            <li>At the time of application, the applicant is enrolled in and actively completing the final year of their approved acupuncture education.</li>
         </ul>
         <p><strong>Applicants educated in a Canadian jurisdiction outside of Alberta</strong>&nbsp;must upload a copy of their diploma and transcripts to their online application form. Additional documentation, such as a program syllabus, may be requested.</p>
         
