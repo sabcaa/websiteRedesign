@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="programs-layout">
 
     <!-- ABOUT PROGRAM APPROVAL --> 
-    <section class="content-section" id="about>
+    <section class="content-section" id="about">
         <h2>
                 <span class="section-icon"><i class="fa-solid fa-circle-info"></i></span>
                 About program approval
@@ -49,7 +49,7 @@ get_header(); ?>
         )); ?>
 
         <p>The following approval statuses are used:</p>
-        <table>
+        <table class="caa-table">
             <thead>
                 <tr>
                    <th>Status</th>
@@ -58,7 +58,7 @@ get_header(); ?>
             </thead>
             <tbody>
                 <tr>
-                    <td>Approved></td>
+                    <td>Approved</td>
                     <td>The program currently meets the College&rsquo;s requirements for registration purposes.</td>
                  </tr>
                 <tr>
