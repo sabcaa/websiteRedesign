@@ -27,7 +27,7 @@ get_header(); ?>
         </h2>
 
         <div class="callout">
-                On April 29, 2026, the Council approved termination of the practical components of the Alberta Acupuncture Registration Examinations (AARE). New candidates who have never attempted the AARE <strong>are not required</strong> to take or pass the acupuncture points or modalities exams. April 2026 was the last general administration of the practical exams.
+                The Council approved termination of the practical components of the Alberta Acupuncture Registration Examinations (AARE). New candidates who have never attempted the AARE <strong>are not required</strong> to take or pass the acupuncture points or modalities exams. April 2026 was the last general administration of the practical exams.
         </div>
 
         <h3>Impact for current students who have never written the AARE</h3>
@@ -75,7 +75,7 @@ get_header(); ?>
             <ul>
                 <li>Pan-Canadian Acupuncturists Examination administered by CARB-TCMPA</li>
                 <li>Online Safety Module offered by the College</li>
-                
+
         <p>For the most current and accurate information regarding the Pan-Canadian Examinations, refer directly to the&nbsp;<a href="https://carb-tcmpa.org/">CARB-TCMPA website</a>&nbsp;and communicate with CARB-TCMPA for any inquiries.</p>
         <h3>Important dates</h3>
         <table>
