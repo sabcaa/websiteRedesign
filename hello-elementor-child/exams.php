@@ -69,12 +69,15 @@ get_header(); ?>
      <section class="content-section">
          <h2>
             <span class="section-icon"><i class="fa-solid fa-circle-info"></i></span>
-            Alberta Acupuncture Registration Examinations information
+            Alberta Acupuncture Registration Examination information
         </h2>
-        <p>The Alberta Acupuncture Registration Examinations include the following components: 
+        <p>The Alberta Acupuncture Registration Examination include the following components: 
             <ul>
                 <li>Pan-Canadian Acupuncturists Examination administered by CARB-TCMPA</li>
                 <li>Online Safety Module offered by the College</li>
+            </ul>
+        
+            <p>Refer to the  <a href="/wp-content/uploads/2026/06/AARE-Candidate-Handbook.pdf" target="_blank" rel="noopener noreferrer">Candidate AARE Handbook</a> for detailed information about the exam.</p>
 
         <p>For the most current and accurate information regarding the Pan-Canadian Examinations, refer directly to the&nbsp;<a href="https://carb-tcmpa.org/">CARB-TCMPA website</a>&nbsp;and communicate with CARB-TCMPA for any inquiries.</p>
         <h3>Important dates</h3>

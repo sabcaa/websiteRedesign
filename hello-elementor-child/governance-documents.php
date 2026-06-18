@@ -372,8 +372,8 @@ get_header(); ?>
                 </li>
                 <li>
                     <div class="doc-row">
-                        <span class="doc-name">Hearings Handbook</span>
-                        <a href="/wp-content/uploads/2025/06/Hearings-Handbook.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                        <span class="doc-name">Candidate AARE Handbook</span>
+                        <a href="/wp-content/uploads/2026/06/AARE-Candidate-Handbook.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
                     </div>
                 </li>
             </ul>
