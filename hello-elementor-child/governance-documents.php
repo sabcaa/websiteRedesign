@@ -229,7 +229,7 @@ get_header(); ?>
                         </li>
                     </ul>
                 </li>
-                <li>
+                 <li>
                     <div class="doc-row">
                         <span class="doc-name">R.1.6 Complaint Review Management Policy</span>
                         <a href="/wp-content/uploads/2026/04/R.1.6-Complaint-Review-Management-Policy.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
@@ -243,13 +243,21 @@ get_header(); ?>
                         </li>
                     </ul>
                 </li>
-
+                
                 <li>
-                    <div class="doc-row">
-                        <span class="doc-name">Examination Application Guide</span>
-                        <a href="/wp-content/uploads/2026/01/Examination-Application-Guide.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                   <div class="doc-row">
+                        <span class="doc-name">R.1.7 Retention of Cancelled Practice Permit Status on the Register</span>
+                        <a href="/wp-content/uploads/2026/05/R.1.7-Retention-of-Cancelled-Practice-Permit-Status-on-the-Register.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
                     </div>
                 </li>
+
+                  <li>
+                   <div class="doc-row">
+                        <span class="doc-name">R.1.8 English Language Proficiency</span>
+                        <a href="/wp-content/uploads/2026/06/R.1.8-English-language-proficiency.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                    </div>
+                </li>
+               
                 <li>
                     <div class="doc-row">
                         <span class="doc-name">CAA Guideline – Practicing during Covid-19</span>
@@ -371,6 +379,12 @@ get_header(); ?>
                     </div>
                 </li>
                 <li>
+                    <div class="doc-row">
+                        <span class="doc-name">Hearings Handbook</span>
+                        <a href="/wp-content/uploads/2025/06/Hearings-Handbook.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                    </div>
+                </li>
+				 <li>
                     <div class="doc-row">
                         <span class="doc-name">Candidate AARE Handbook</span>
                         <a href="/wp-content/uploads/2026/06/AARE-Candidate-Handbook.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
