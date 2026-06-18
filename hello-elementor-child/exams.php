@@ -17,10 +17,19 @@ get_header(); ?>
 
 <div class="page-layout">
 
+
+    <?php get_template_part( 'template-parts/sidebar-toc', null, array(
+        'items' => array(
+            'Changes to exams'                          => '#changes',
+            'Approved exams'                            => '#approvedExams'
+            'Alberta Acupuncture Registration Examination'           => '#aare'
+            'Eligibility'                            => '#eligibility'
+  )); ?>
+
 <main class="main-content">
 
  <!-- End of practicals exam transitions -->
-    <section class="content-section">
+    <section class="content-section" id="changes">
         <h2>
             <span class="section-icon"><i class="fa-solid fa-exclamation"></i></span>
             Changes to exams effective June 2026
@@ -45,7 +54,7 @@ get_header(); ?>
 
 <!-- regular page content -->
 
-    <section class="content-section">
+    <section class="content-section" id="approvedExams">
         <h2>
             <span class="section-icon"><i class="fa-solid fa-stamp"></i></span>
             Approved registration exams
@@ -66,7 +75,7 @@ get_header(); ?>
      </section>
 
     
-     <section class="content-section">
+     <section class="content-section" id="aare">
          <h2>
             <span class="section-icon"><i class="fa-solid fa-circle-info"></i></span>
             Alberta Acupuncture Registration Examination information
@@ -110,7 +119,7 @@ get_header(); ?>
 
     </section>
      
-     <section class="content-section">
+     <section class="content-section" id="eligibility">
         <h2>
             <span class="section-icon"><i class="fa-solid fa-check"></i></span>
             Eligibility for exams
@@ -131,5 +140,26 @@ get_header(); ?>
 
    </main>
 </div>
+
+<!-- TOC scroll highlighting -->
+<script>
+    const sections = document.querySelectorAll('.content-section');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+</script>
 
 <?php get_footer(); ?>
