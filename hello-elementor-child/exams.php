@@ -21,9 +21,10 @@ get_header(); ?>
     <?php get_template_part( 'template-parts/sidebar-toc', null, array(
         'items' => array(
             'Changes to exams'                          => '#changes',
-            'Approved exams'                            => '#approvedExams'
-            'Alberta Acupuncture Registration Examination'           => '#aare'
-            'Eligibility'                            => '#eligibility'
+            'Approved exams'                            => '#approvedExams',
+            'Alberta Acupuncture Registration Examination'           => '#aare',
+            'Eligibility'                            => '#eligibility',
+        ),
   )); ?>
 
 <main class="main-content">
