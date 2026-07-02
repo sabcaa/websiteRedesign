@@ -177,7 +177,7 @@ get_header(); ?>
                 </table>
             <?php else : ?>
                 <div class="callout">
-                    <strong>Note:</strong> Mandatory College-directed activities for the current cycle will be posted here in April.
+                    <strong>Note:</strong> Mandatory College-directed activities for the current cycle are generally posted in the first quarter (April to June).
                 </div>
             <?php endif; ?>
 
@@ -345,7 +345,7 @@ get_header(); ?>
                     ),
                     array(
                         'q' => 'Where can I find information on College-directed activities for the current CCP cycle?',
-                        'a' => 'Information on College-directed activities for the current cycle is posted on this page. Information is made available on April 1 of each registration year.',
+                        'a' => 'Information on College-directed activities for the current cycle is posted on this page. Information is generally posted in the first quarter (April to June) of the registration year.',
                     ),
                     array(
                         'q' => 'Does the College provide CCP lecture or learning activities?',
