@@ -20,17 +20,53 @@ get_header(); ?>
     <section class="content-section">
         <h2>
             <span class="section-icon"><i class="fa-solid fa-shield-halved"></i></span>
-            Requirements
+            Requirements for professional liability insurance
         </h2>
-        <p>The College of Acupuncturists of Alberta requires all regulated members (excluding non-practicing members) to carry professional liability insurance (PLI) of at least <strong>$2 million per claims/occurrence</strong> at all times.</p>
+        <p>The College of Acupuncturists of Alberta requires all regulated members (excluding non-practicing members) to carry professional liability insurance (PLI), also known as Errors & Omissions Insurance, that meets the College's minimum requirements.</p>
+
+        <p>To meet all requirements, the policy or certificate must:</p>
+
+        <ul>
+            <li>Be issued in your legal name.</li>
+            <li>Specifically identify “acupuncture services” as an insured service.</li>
+            <li>Provide a minimum of $2,000,000 in coverage per claim (per occurrence).</li>
+            <li>Include disciplinary legal defense and expenses with:</li>
+                <ul>
+                    <li>a minimum of $25,000 per claim; and</li>
+                    <li>a minimum annual aggregate of $50,000.</li>
+                </ul>
+        </ul>
+
+        <p>Commercial general liability (CGL) is optional coverage and <strong>NOT</strong> required.</p>
+
+        <p>Only policies or certificates are accepted as proof of insurance. Proof of payment or policy summary letters are not accepted as valid evidence of insurance coverage.</p>
+        
+        <p>Adequate insurance coverage protects both the patient and the acupuncturist. Professional liability insurance protects the public by ensuring they have recourse in the event of harm caused by a registrant. An acupuncturist is protected professionally and financially from claims (real, alleged or false) made against them as a result of rendering professional services.</p>
+
+        <p>All members should review their professional liability insurance to confirm the renewal date and ensure that they have professional liability insurance in force at all times in the amount and type required by the College.</p>
+    </section>
+
+    <!-- LEGAL COSTS INSURANCE -->
+    <section class="content-section">
+        <h2>
+            <span class="section-icon"><i class="fa-solid fa-gavel"></i></span>
+            Coverage for legal defense and expenses
+        </h2>
+         
 
         <div class="callout-warning">
             As a result of bylaw amendments in July 2025, all acupuncturists are required to have coverage for disciplinary legal defense and expenses. <a href="/uncategorized/changes-to-professional-liability-insurance/">Read the announcement for further information about this important change</a>.
         </div>
 
-        <p>Adequate insurance coverage protects both the patient and the acupuncturist. Professional liability insurance protects the public by ensuring they have recourse in the event of harm caused by a registrant. An acupuncturist is protected professionally and financially from claims (real, alleged or false) made against them as a result of rendering professional services.</p>
+        <p>By July 15, 2026, your professional liability insurance policy must:</p>
 
-        <p>All members should review their professional liability insurance to confirm the renewal date and ensure that they have professional liability insurance in force at all times in the amount and type required by the College.</p>
+        <ol>
+            <li>Include coverage for disciplinary legal defense and expenses.</li>
+            <li>Cover a minimum of $25,000 per claim for disciplinary legal defense and expenses.</li>
+            <li>Have a minimum annual aggregate of $50,000 for disciplinary legal defense and expenses.</li>
+        
+        <p>You must still have a minimum of $2,000,000 of total coverage in your own name.</p>
+
     </section>
 
     <!-- INSURANCE PROVIDERS -->
@@ -41,9 +77,9 @@ get_header(); ?>
         </h2>
         <p>The College does not endorse any insurance provider or policy. The following options are provided for general information only. They are provided in good faith; however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, reliability, validity, availability or completeness of the service or product.</p>
         <ul>
-            <li>Lloyd Sadd</li>
+            <li>Navacord</li>
             <li>HUB</li>
-            <li>Paisley Partners Inc</li>
+            <li>Prolink</li>
         </ul>
     </section>
 
