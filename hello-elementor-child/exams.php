@@ -50,6 +50,78 @@ get_header(); ?>
         <p>Candidates who failed the acupuncture points or modalities exam, or both, remain subject to the registration requirements and policy that were in effect at the time they wrote the AARE. </p>
         <p>Any candidates who wrote the AARE in April 2026 or prior and failed any component must still pass all components of the AARE. The College is providing a one-year transition period to support candidates in meeting their exam requirements.</p>
 
+        <h3>Exam retake - how to apply</h3>
+            <p>Applicants who wish to retake the Modalities Exam or Acupuncture Points Exam may do so through the Member Portal. Log in to the Member Portal to submit your retake application and pay the required exam fee. Please ensure that all application requirements are completed by the applicable deadline listed in the following table.</p>
+
+        <h3>Tentative exam dates and application deadlines</h3>
+            <p>Retake applications must be completed at least 30 days before the exam date. A complete application includes submission of the retake application and payment of the applicable exam fee.</p>
+
+        <table class="caa-table">
+         <thead>
+                <tr>
+                    <th>Tentative Exam Date</th>
+                    <th>Application Deadline</th>
+                </tr>
+            </thead>    
+        <tbody>
+            
+            <tr>
+            <td>
+            <p>October 22, 2026</p>
+            </td>
+            <td>
+            <p>September 22, 2026</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>November 19, 2026</p>
+            </td>
+            <td>
+            <p>October 20, 2026</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>December 17, 2026</p>
+            </td>
+            <td>
+            <p>November 17, 2026</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>January 21, 2027</p>
+            </td>
+            <td>
+            <p>December 22, 2026</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>February 18, 2027</p>
+            </td>
+            <td>
+            <p>January 19, 2027</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>March 18, 2027</p>
+            </td>
+            <td>
+            <p>February 16, 2027</p>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+            <p>Please note: Exam dates are tentative and may be subject to change.</p>
+
+        <h3>Exam location</h3>
+            <p>Retake examinations will be held in Edmonton, Alberta.</p>
+            <p>Once your exam application has been approved, you will receive the exam location, time, and other relevant details as soon as they are available.</p>
+
 
     </section>
 
@@ -91,7 +163,7 @@ get_header(); ?>
 
         <p>For the most current and accurate information regarding the Pan-Canadian Examinations, refer directly to the&nbsp;<a href="https://carb-tcmpa.org/">CARB-TCMPA website</a>&nbsp;and communicate with CARB-TCMPA for any inquiries.</p>
         <h3>Important dates</h3>
-        <table>
+        <table class="caa-table">
             <tbody>
             <tr>
             <td>&nbsp;</td>

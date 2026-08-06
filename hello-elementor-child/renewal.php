@@ -77,6 +77,7 @@ get_header(); ?>
                     </ol>
                 </li>
                 <li>Submit a valid <a href="/first-aid-cpr/">standard first-aid and CPR-C</a> certificate.</li>
+                <li>Complete the College's <a href="https://caa-abuse-misconduct-course.netlify.app/">sexual abuse and misconduct course</a> and submit proof of completion.</li>
                 <li>Pay the practice permit fee.</li>
             </ol>
             <div class="callout">
