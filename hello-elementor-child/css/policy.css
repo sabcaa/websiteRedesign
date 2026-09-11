@@ -148,10 +148,19 @@
 }
 
 /* Only add spacing above "On this page" when it follows the Policies box */
+
+/* More breathing room between the two sidebar boxes */
 .policy-nav-box + .toc-collapsible {
-    margin-top: 16px;
+    margin-top: 28px;   /* was 16px */
 }
 
+/* Tone down the Policies box header so it doesn't compete
+   with page content — light background instead of solid blue */
+.toc-box .toc-header {
+    background: var(--blue-light);
+    color: var(--blue);
+    font-weight: 700;
+}
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 800px) {
