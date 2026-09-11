@@ -30,8 +30,9 @@ $version_history = get_field('version_history');
         ?>
 
         <?php get_template_part( 'template-parts/sidebar-toc', null, array(
-            'items'      => $processed['toc'],          // now auto-generated
+            'items'      => $processed['toc'],          // auto-generated
             'nav_groups' => policy_get_sidebar_nav_groups(),
+            'collapsible' => true, // for policy pages, it's collapsed to be secondary to policy toc
         )); ?>
 
     <main class="main-content policy-content">

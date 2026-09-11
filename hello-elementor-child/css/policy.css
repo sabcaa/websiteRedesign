@@ -131,6 +131,28 @@
     padding-left: 1.6em;
 }
 
+/* Remove default <details> marker, style summary like existing toc-header */
+.toc-collapsible summary {
+    list-style: none;
+    cursor: pointer;
+}
+.toc-collapsible summary::-webkit-details-marker {
+    display: none;
+}
+.toc-collapsible summary::after {
+    content: '▾';
+    float: right;
+}
+.toc-collapsible[open] summary::after {
+    content: '▴';
+}
+
+/* Only add spacing above "On this page" when it follows the Policies box */
+.policy-nav-box + .toc-collapsible {
+    margin-top: 16px;
+}
+
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 800px) {
     .policy-meta-bar {

@@ -26,27 +26,13 @@
 $items         = $args['items']         ?? array();
 $cta_primary   = $args['cta_primary']   ?? null;
 $cta_secondary = $args['cta_secondary'] ?? null;
-$nav_groups    = $args['nav_groups']    ?? array(); // for policy pages
+$nav_groups    = $args['nav_groups']    ?? array();
+$collapsible   = $args['collapsible']   ?? false; // NEW, opt-in only
 ?>
 
 <aside class="sidebar">
 
-    <?php if ( ! empty( $items ) ) : ?>
-        <nav class="toc-box" aria-label="On this page">
-            <div class="toc-header">On this page</div>
-            <ul class="toc-list">
-                <?php foreach ( $items as $label => $url ) : ?>
-                    <li>
-                        <a href="<?php echo esc_attr( $url ); ?>">
-                            <?php echo esc_html( $label ); ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
-    <?php endif; ?>
-
-      <?php if ( ! empty( $nav_groups ) ) : ?>
+    <?php if ( ! empty( $nav_groups ) ) : ?>
         <nav class="policy-nav-box" aria-label="Browse policies">
             <div class="toc-header">Policies</div>
             <?php foreach ( $nav_groups as $group_label => $policies ) : ?>
@@ -67,34 +53,49 @@ $nav_groups    = $args['nav_groups']    ?? array(); // for policy pages
         </nav>
     <?php endif; ?>
 
+    <?php if ( ! empty( $items ) && $collapsible ) : ?>
+        <!-- Collapsible mode: used on policy.php. Works as-is on mobile too,
+             so no separate mobile fallback needed for this mode. -->
+        <details class="toc-box toc-collapsible">
+            <summary class="toc-header">On this page</summary>
+            <ul class="toc-list">
+                <?php foreach ( $items as $label => $url ) : ?>
+                    <li><a href="<?php echo esc_attr( $url ); ?>"><?php echo esc_html( $label ); ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </details>
+    <?php elseif ( ! empty( $items ) ) : ?>
+        <!-- Original always-open mode: unchanged, used by every existing page -->
+        <nav class="toc-box" aria-label="On this page">
+            <div class="toc-header">On this page</div>
+            <ul class="toc-list">
+                <?php foreach ( $items as $label => $url ) : ?>
+                    <li><a href="<?php echo esc_attr( $url ); ?>"><?php echo esc_html( $label ); ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </nav>
+    <?php endif; ?>
+
     <?php if ( $cta_primary || $cta_secondary ) : ?>
         <div class="toc-cta">
             <?php if ( $cta_primary ) : ?>
-                <a href="<?php echo esc_url( $cta_primary['url'] ); ?>" class="btn btn-primary">
-                    <?php echo esc_html( $cta_primary['label'] ); ?>
-                </a>
+                <a href="<?php echo esc_url( $cta_primary['url'] ); ?>" class="btn btn-primary"><?php echo esc_html( $cta_primary['label'] ); ?></a>
             <?php endif; ?>
             <?php if ( $cta_secondary ) : ?>
-                <a href="<?php echo esc_url( $cta_secondary['url'] ); ?>" class="btn btn-secondary">
-                    <?php echo esc_html( $cta_secondary['label'] ); ?>
-                </a>
+                <a href="<?php echo esc_url( $cta_secondary['url'] ); ?>" class="btn btn-secondary"><?php echo esc_html( $cta_secondary['label'] ); ?></a>
             <?php endif; ?>
         </div>
     <?php endif; ?>
 
 </aside>
 
-<!-- MOBILE TOC -->
-<?php if ( ! empty( $items ) ) : ?>
+<!-- MOBILE TOC (only used in original, non-collapsible mode) -->
+<?php if ( ! empty( $items ) && ! $collapsible ) : ?>
     <details class="mobile-toc">
         <summary>On this page</summary>
         <ul>
             <?php foreach ( $items as $label => $url ) : ?>
-                <li>
-                    <a href="<?php echo esc_attr( $url ); ?>">
-                        <?php echo esc_html( $label ); ?>
-                    </a>
-                </li>
+                <li><a href="<?php echo esc_attr( $url ); ?>"><?php echo esc_html( $label ); ?></a></li>
             <?php endforeach; ?>
         </ul>
     </details>
