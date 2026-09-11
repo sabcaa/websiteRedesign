@@ -82,6 +82,55 @@
     border-left-color: var(--blue);
 }
 
+/* ============================================================
+   AUTO-NUMBERING
+   H2 = section number (1., 2., 3...)
+   Ordered list items = clause number (1.1, 1.1.1...) nested
+   automatically based on indent level.
+   Scope is .policy-content so it also numbers the Version
+   History heading as the final section, in sequence.
+============================================================ */
+.policy-content {
+    counter-reset: section;
+}
+
+.policy-content h2 {
+    counter-increment: section;
+    counter-reset: clause;
+    scroll-margin-top: 24px;
+}
+
+.policy-content h2::before {
+    content: counter(section) ". ";
+    color: var(--blue);
+}
+
+.policy-body ol {
+    list-style: none;
+    margin: 0 0 14px;
+    padding-left: 0;
+}
+
+.policy-body ol > li {
+    counter-increment: clause;
+    position: relative;
+    padding-left: 3.2em;
+    margin-bottom: 10px;
+}
+
+.policy-body ol > li::before {
+    content: counter(section) "." counters(clause, ".") "  ";
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.policy-body ol ol {
+    margin-top: 10px;
+    padding-left: 1.6em;
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 800px) {
     .policy-meta-bar {

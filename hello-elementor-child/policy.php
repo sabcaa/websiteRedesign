@@ -23,19 +23,16 @@ $version_history = get_field('version_history');
 
 <div class="page-layout">
 
-    <?php get_template_part( 'template-parts/sidebar-toc', null, array(
-        'items' => array(
-            'Introduction'    => '#introduction',
-            'Purpose'         => '#purpose',
-            'Definitions'     => '#definitions',
-            'Policy'          => '#policy',
-            'Authority'       => '#authority',
-            'Scope'           => '#scope',
-            'Related Policies' => '#related',
-            'Version History' => '#version-history',
-        ),
-        'nav_groups' => policy_get_sidebar_nav_groups(),
-    )); ?>
+
+    <?php
+        $raw_content = apply_filters( 'the_content', get_the_content() );
+        $processed   = policy_add_heading_anchors( $raw_content );
+        ?>
+
+        <?php get_template_part( 'template-parts/sidebar-toc', null, array(
+            'items'      => $processed['toc'],          // now auto-generated
+            'nav_groups' => policy_get_sidebar_nav_groups(),
+        )); ?>
 
     <main class="main-content policy-content">
 
@@ -55,7 +52,7 @@ $version_history = get_field('version_history');
         </div>
 
         <section class="content-section policy-body">
-            <?php the_content(); ?>
+             <?php echo $processed['content']; ?>
         </section>
 
         <?php if ( ! empty( $version_history ) ) : ?>

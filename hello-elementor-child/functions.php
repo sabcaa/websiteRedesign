@@ -183,3 +183,89 @@ function policy_get_sidebar_nav_groups() {
 
     return $groups;
 }
+
+// for Policy on-page TOC
+/**
+ * Scans rendered content for H2s, adds an id="" to each one
+ * (based on its text, if it doesn't already have one), and
+ * returns both the modified content and a ready-to-use TOC array.
+ */
+function policy_add_heading_anchors( $content ) {
+    if ( empty( $content ) ) {
+        return array( 'content' => $content, 'toc' => array() );
+    }
+
+    libxml_use_internal_errors( true );
+    $dom = new DOMDocument();
+    $dom->loadHTML(
+        '<?xml encoding="utf-8" ?>' . $content,
+        LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD
+    );
+    libxml_clear_errors();
+
+    $headings   = $dom->getElementsByTagName('h2');
+    $toc        = array();
+    $used_slugs = array();
+
+    foreach ( $headings as $heading ) {
+        $text = trim( $heading->textContent );
+        if ( '' === $text ) {
+            continue;
+        }
+
+        if ( $heading->hasAttribute('id') ) {
+            $slug = $heading->getAttribute('id'); // respect a manual override
+        } else {
+            $slug = sanitize_title( $text );
+            $base = $slug;
+            $i = 2;
+            while ( in_array( $slug, $used_slugs, true ) ) {
+                $slug = $base . '-' . $i++;
+            }
+            $heading->setAttribute( 'id', $slug );
+        }
+
+        $used_slugs[] = $slug;
+        $toc[ $text ] = '#' . $slug;
+    }
+
+    return array(
+        'content' => $dom->saveHTML(),
+        'toc'     => $toc,
+    );
+}
+
+// flag policy pages in the Pages screen of WordPress backend
+// Add a "Type" column to the Pages admin list
+add_filter('manage_pages_columns', function($columns) {
+    $columns['policy_flag'] = 'Type';
+    return $columns;
+});
+
+add_action('manage_pages_custom_column', function($column, $post_id) {
+    if ($column === 'policy_flag' && get_page_template_slug($post_id) === 'policy.php') {
+        echo '<span style="background:var(--blue,#004A8D);color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;">POLICY</span>';
+    }
+}, 10, 2);
+
+// Add a "Policies only" filter dropdown above the Pages list
+add_action('restrict_manage_posts', function($post_type) {
+    if ($post_type !== 'page') return;
+    $selected = $_GET['policy_filter'] ?? '';
+    ?>
+    <select name="policy_filter">
+        <option value="">All pages</option>
+        <option value="policy" <?php selected($selected, 'policy'); ?>>Policies only</option>
+    </select>
+    <?php
+});
+
+add_action('pre_get_posts', function($query) {
+    global $pagenow;
+    if (is_admin() && $query->is_main_query() && $pagenow === 'edit.php'
+        && ($_GET['post_type'] ?? '') === 'page'
+        && ($_GET['policy_filter'] ?? '') === 'policy') {
+        $query->set('meta_key', '_wp_page_template');
+        $query->set('meta_value', 'policy.php');
+    }
+});
