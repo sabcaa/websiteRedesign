@@ -34,6 +34,13 @@ function hello_child_enqueue_styles() {
                 $css_file_url,
                 array('hello-child-style')
             );
+        
+        } elseif ( 'policy.php' === get_page_template_slug() ) {
+            wp_enqueue_style(
+                'hello-child-policy',
+                get_stylesheet_directory_uri() . '/css/policy.css',
+                array('hello-child-style')
+            );
         }
     }
 
@@ -141,3 +148,38 @@ function hello_child_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'hello_child_customizer' );
 
+// for the policy pages side nav to go between policy pages
+function policy_get_sidebar_nav_groups() {
+    if ( ! is_page() ) {
+        return array();
+    }
+
+    $current_id = get_the_ID();
+    $category_page = get_post_parent( $current_id ); // e.g. "Governance Policies"
+
+    if ( ! $category_page ) {
+        return array();
+    }
+
+    $hub_page = get_post_parent( $category_page->ID ); // e.g. "Policies"
+    $category_pages = $hub_page
+        ? get_pages( array( 'child_of' => $hub_page->ID, 'parent' => $hub_page->ID, 'sort_column' => 'menu_order' ) )
+        : array( $category_page );
+
+    $groups = array();
+    foreach ( $category_pages as $cat ) {
+        $children = get_pages( array( 'parent' => $cat->ID, 'sort_column' => 'menu_order' ) );
+        if ( empty( $children ) ) {
+            continue;
+        }
+        $groups[ $cat->post_title ] = array_map( function( $child ) use ( $current_id ) {
+            return array(
+                'label'  => $child->post_title,
+                'url'    => get_permalink( $child->ID ),
+                'active' => ( $child->ID === $current_id ),
+            );
+        }, $children );
+    }
+
+    return $groups;
+}

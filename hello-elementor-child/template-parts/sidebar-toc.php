@@ -26,6 +26,7 @@
 $items         = $args['items']         ?? array();
 $cta_primary   = $args['cta_primary']   ?? null;
 $cta_secondary = $args['cta_secondary'] ?? null;
+$nav_groups    = $args['nav_groups']    ?? array(); // for policy pages
 ?>
 
 <aside class="sidebar">
@@ -42,6 +43,27 @@ $cta_secondary = $args['cta_secondary'] ?? null;
                     </li>
                 <?php endforeach; ?>
             </ul>
+        </nav>
+    <?php endif; ?>
+
+      <?php if ( ! empty( $nav_groups ) ) : ?>
+        <nav class="policy-nav-box" aria-label="Browse policies">
+            <div class="toc-header">Policies</div>
+            <?php foreach ( $nav_groups as $group_label => $policies ) : ?>
+                <div class="policy-nav-group">
+                    <div class="policy-nav-group-label"><?php echo esc_html( $group_label ); ?></div>
+                    <ul class="policy-nav-list">
+                        <?php foreach ( $policies as $policy ) : ?>
+                            <li>
+                                <a href="<?php echo esc_url( $policy['url'] ); ?>"
+                                   class="<?php echo $policy['active'] ? 'active' : ''; ?>">
+                                    <?php echo esc_html( $policy['label'] ); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
         </nav>
     <?php endif; ?>
 
