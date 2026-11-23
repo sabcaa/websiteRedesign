@@ -69,6 +69,15 @@ function hello_child_enqueue_styles() {
         true
     );
 
+    // 5. Tabs component JS
+    wp_enqueue_script(
+        'hello-child-tabs',
+        get_stylesheet_directory_uri() . '/js/tabs.js', //no CSS to enqueue because it's in styles.css
+        array(),
+        null,
+        true
+    );
+
 }
 add_action( 'wp_enqueue_scripts', 'hello_child_enqueue_styles' );
 
