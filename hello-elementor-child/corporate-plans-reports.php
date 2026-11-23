@@ -95,7 +95,7 @@ get_header(); ?>
     <section class="content-section">
         <h2>
             <span class="section-icon"><i class="fa-solid fa-bullseye"></i></span>
-            Business Plan
+            Business Plans
         </h2>
 
         <div class="tabs" data-tabs>
@@ -118,12 +118,23 @@ get_header(); ?>
                 </button>
             </div>
 
+            <!-- ADD FUTURE YEARS HERE copy the div class of the prior year or entire prior year and update the content-->
+
+            <!-- 2027 placeholder -->
+
             <!-- 2026 -->
             <div class="tab-panel" role="tabpanel" id="panel-bp-2026" aria-labelledby="tab-bp-2026">
                 <p>The College's 2026 business plan includes the following targets:</p>
                 <ol>
-                    <li>Replace with your first 2026 target.</li>
-                    <li>Replace with your second 2026 target.</li>
+                    
+                    <li>Analyze results of the pilot CCP audit and make improvements to the process as necessary.</li>
+                    <li>Conduct a comprehensive review of CCP submissions from the past year to assess the quality and effectiveness of the CCP program in upholding professional standards.</li>
+                    <li>Conduct a comprehensive review of existing standards of practice, policies, and procedures to ensure alignment with legislative changes.</li>
+                    <li>Improve communications with registrants through town hall meetings or webinars.</li>
+                    <li>Research opportunities around applying automation and AI tools to realize operational efficiencies.</li>
+                    <li>Improve digital records management by implementing best practices.</li>
+                    <li>Develop a formal cancellation application to streamline operations and ensure the integrity of the registry.</li>
+                    <li>Draft a practice visit procedure.</li>
                 </ol>
             </div>
 
