@@ -888,6 +888,111 @@ a[href$=".pdf"] {
 }
 
 
+/* ============================================================
+   TABS
+   Horizontal tabs with scroll arrows for overflow.
+   Markup: see the Business Plan section of corporate-plans-reports.php
+   Behaviour: js/tabs.js (looks for [data-tabs])
+   BLUE — navigation between related information
+============================================================ */
+.tabs {
+    margin: 16px 0;
+}
+
+.tabs-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid var(--blue-light);
+}
+
+/* The scrolling strip. Scrollbar hidden; arrows do the scrolling. */
+.tabs-scroll {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+.tabs-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.tabs-list {
+    display: flex;
+    gap: 4px;
+}
+
+.tab {
+    flex-shrink: 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1;
+    color: var(--text-light);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 6px 6px 0 0;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.tab:hover {
+    color: var(--blue);
+    background: var(--blue-light);
+}
+.tab[aria-selected="true"] {
+    color: var(--blue);
+    border-bottom-color: var(--blue);
+}
+.tab:focus-visible,
+.tabs-arrow:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: -2px;
+}
+
+/* Scroll arrows: hidden unless the tabs overflow (JS adds .has-overflow) */
+.tabs-arrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.tabs-nav.has-overflow .tabs-arrow {
+    display: flex;
+}
+.tabs-arrow:hover:not(:disabled) {
+    background: var(--blue);
+    color: var(--white);
+}
+.tabs-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.tab-panel {
+    padding-top: 24px;
+}
+.tab-panel[hidden] {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .tab {
+        padding: 12px 18px;
+    }
+}
+
 /* ============================================
    SITE FOOTER
    ============================================ */
