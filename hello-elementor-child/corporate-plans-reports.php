@@ -98,37 +98,63 @@ get_header(); ?>
             Business Plan
         </h2>
 
-        <h3>2025 Business Plan</h3>
-        <p>The College's 2025 business plan includes the following targets:</p>
-        <ol>
-            <li>Publish a policy and procedure for auditing renewal applications and continuing competence program submissions.</li>
-            <li>Complete a pilot audit of renewal applications and continuing competence program submissions.</li>
-            <li>Publish a registration guide for applicants and registrants.</li>
-            <li>Publish a hearings procedure.</li>
-            <li>Complete a pilot test of the Acupuncture Education Program Review process.</li>
-            <li>Complete a formal Acupuncture Education Program Review.</li>
-            <li>Complete membership consultation of new standards of practice.</li>
-            <li>Review the College's policy framework for gaps and develop any necessary operational and regulatory policies.</li>
-            <li>Modernize College operations by converting PDF forms to online forms.</li>
-            <li>Launch a modernized, online learning module to replace the safety exam.</li>
-            <li>Develop an online learning module for sexual misconduct and abuse.</li>
-        </ol>
+        <div class="tabs" data-tabs>
+            <div class="tabs-nav">
+                <button type="button" class="tabs-arrow tabs-arrow--prev" aria-label="Scroll tabs left">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                </button>
 
-        <h3>Prior years</h3>
-        <ul class="doc-list">
-            <li>
-                <div class="doc-row">
-                    <span class="doc-name">2024 Business Plan</span>
-                    <a href="/wp-content/uploads/2024/05/2024-Business-Plan-CAA-LP01232.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
+                <div class="tabs-scroll">
+                    <div class="tabs-list" role="tablist" aria-label="Business plans by year">
+                        <button type="button" class="tab" role="tab" id="tab-bp-2026" aria-controls="panel-bp-2026" aria-selected="true">2026</button>
+                        <button type="button" class="tab" role="tab" id="tab-bp-2025" aria-controls="panel-bp-2025" aria-selected="false" tabindex="-1">2025</button>
+                        <button type="button" class="tab" role="tab" id="tab-bp-2024" aria-controls="panel-bp-2024" aria-selected="false" tabindex="-1">2024</button>
+                        <button type="button" class="tab" role="tab" id="tab-bp-2023" aria-controls="panel-bp-2023" aria-selected="false" tabindex="-1">2023</button>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="doc-row">
-                    <span class="doc-name">2023 Business Plan</span>
-                    <a href="/wp-content/uploads/2023/06/2023-25-Business-Plan_FINAL.pdf" class="doc-action" target="_blank" rel="noopener noreferrer">View document</a>
-                </div>
-            </li>
-        </ul>
+
+                <button type="button" class="tabs-arrow tabs-arrow--next" aria-label="Scroll tabs right">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- 2026 -->
+            <div class="tab-panel" role="tabpanel" id="panel-bp-2026" aria-labelledby="tab-bp-2026">
+                <p>The College's 2026 business plan includes the following targets:</p>
+                <ol>
+                    <li>Replace with your first 2026 target.</li>
+                    <li>Replace with your second 2026 target.</li>
+                </ol>
+            </div>
+
+            <!-- 2025 -->
+            <div class="tab-panel" role="tabpanel" id="panel-bp-2025" aria-labelledby="tab-bp-2025" hidden>
+                <p>The College's 2025 business plan includes the following targets:</p>
+                <ol>
+                    <li>Publish a policy and procedure for auditing renewal applications and continuing competence program submissions.</li>
+                    <li>Complete a pilot audit of renewal applications and continuing competence program submissions.</li>
+                    <li>Publish a registration guide for applicants and registrants.</li>
+                    <li>Publish a hearings procedure.</li>
+                    <li>Complete a pilot test of the Acupuncture Education Program Review process.</li>
+                    <li>Complete a formal Acupuncture Education Program Review.</li>
+                    <li>Complete membership consultation of new standards of practice.</li>
+                    <li>Review the College's policy framework for gaps and develop any necessary operational and regulatory policies.</li>
+                    <li>Modernize College operations by converting PDF forms to online forms.</li>
+                    <li>Launch a modernized, online learning module to replace the safety exam.</li>
+                    <li>Develop an online learning module for sexual misconduct and abuse.</li>
+                </ol>
+            </div>
+
+            <!-- 2024 -->
+            <div class="tab-panel" role="tabpanel" id="panel-bp-2024" aria-labelledby="tab-bp-2024" hidden>
+                <p><a href="/wp-content/uploads/2024/05/2024-Business-Plan-CAA-LP01232.pdf" target="_blank" rel="noopener noreferrer">View the 2024 Business Plan</a></p>
+            </div>
+
+            <!-- 2023 -->
+            <div class="tab-panel" role="tabpanel" id="panel-bp-2023" aria-labelledby="tab-bp-2023" hidden>
+                <p><a href="/wp-content/uploads/2023/06/2023-25-Business-Plan_FINAL.pdf" target="_blank" rel="noopener noreferrer">View the 2023 Business Plan</a></p>
+            </div>
+        </div>
     </section>
 
     <!-- STRATEGIC PLAN -->
